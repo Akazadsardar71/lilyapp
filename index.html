@@ -540,19 +540,167 @@
             buttons[5].addEventListener('click', function() {
                 document.getElementById('dashboard').style.display = 'none';
                 document.getElementById('financial-record').style.display = 'block';
-            });
+            });<div class="card">
+    <h3>অনলাইন চাঁদা</h3>
+    <p>সরাসরি অনলাইনে দান করুন</p>
+    <button class="btn">বিস্তারিত দেখুন</button>
+</div><!-- অনলাইন চাঁদা পেজ -->
+<div id="online-donation" style="display: none;" class="container">
+    <button onclick="showDashboard()" class="btn" style="margin-bottom: 15px;">← ফিরে যান</button>
+    <h2>অনলাইন চাঁদা</h2>
+    <div class="card">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <p style="margin-bottom: 20px;">আমাদের মাদ্রাসার উন্নয়নে অবদান রাখতে আপনার অনুদান পাঠাতে পারেন। আপনার অনুদানের টাকা মাদ্রাসার ছাত্রদের শিক্ষা, শিক্ষকদের বেতন, ও মাদ্রাসার অবকাঠামো উন্নয়নে ব্যয় করা হবে।</p>
+            
+            <form id="donation-form" style="background-color: #f9f9f9; padding: 20px; border-radius: 5px; border: 1px solid #ddd;">
+                <div style="margin-bottom: 15px;">
+                    <label for="name" style="display: block; margin-bottom: 5px; font-weight: bold;">নাম:</label>
+                    <input type="text" id="name" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 3px;">
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="mobile" style="display: block; margin-bottom: 5px; font-weight: bold;">মোবাইল নম্বর:</label>
+                    <input type="text" id="mobile" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 3px;">
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="amount" style="display: block; margin-bottom: 5px; font-weight: bold;">টাকার পরিমাণ:</label>
+                    <input type="number" id="amount" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 3px;">
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="payment-method" style="display: block; margin-bottom: 5px; font-weight: bold;">পেমেন্ট পদ্ধতি:</label>
+                    <select id="payment-method" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 3px;">
+                        <option value="">পেমেন্ট পদ্ধতি নির্বাচন করুন</option>
+                        <option value="bkash">বিকাশ</option>
+                        <option value="nagad">নগদ</option>
+                        <option value="rocket">রকেট</option>
+                        <option value="bank">ব্যাংক ট্রান্সফার</option>
+                    </select>
+                </div>
+                
+                <div id="payment-info" style="margin-bottom: 15px; display: none;">
+                    <!-- বিকাশ ইনফো -->
+                    <div id="bkash-info" style="display: none;">
+                        <h4 style="margin-top: 10px; color: #1a6836;">বিকাশ পেমেন্ট নির্দেশনা</h4>
+                        <p>বিকাশ নম্বর: <strong>০১৭১২৩৪৫৬৭৮</strong> (পার্সোনাল)</p>
+                        <ol>
+                            <li>বিকাশ অ্যাপ বা ডায়াল *247# ওপেন করুন</li>
+                            <li>"সেন্ড মানি" অপশন সিলেক্ট করুন</li>
+                            <li>আমাদের নম্বর ০১৭১২৩৪৫৬৭৮ এন্টার করুন</li>
+                            <li>টাকার পরিমাণ এন্টার করুন</li>
+                            <li>রেফারেন্স এ "মাদ্রাসা" লিখুন</li>
+                            <li>আপনার পিন এন্টার করুন</li>
+                        </ol>
+                    </div>
+                    
+                    <!-- নগদ ইনফো -->
+                    <div id="nagad-info" style="display: none;">
+                        <h4 style="margin-top: 10px; color: #1a6836;">নগদ পেমেন্ট নির্দেশনা</h4>
+                        <p>নগদ নম্বর: <strong>০১৮১২৩৪৫৬৭৮</strong> (পার্সোনাল)</p>
+                        <ol>
+                            <li>নগদ অ্যাপ বা ডায়াল *167# ওপেন করুন</li>
+                            <li>"সেন্ড মানি" অপশন সিলেক্ট করুন</li>
+                            <li>আমাদের নম্বর ০১৮১২৩৪৫৬৭৮ এন্টার করুন</li>
+                            <li>টাকার পরিমাণ এন্টার করুন</li>
+                            <li>রেফারেন্স এ "মাদ্রাসা" লিখুন</li>
+                            <li>আপনার পিন এন্টার করুন</li>
+                        </ol>
+                    </div>
+                    
+                    <!-- রকেট ইনফো -->
+                    <div id="rocket-info" style="display: none;">
+                        <h4 style="margin-top: 10px; color: #1a6836;">রকেট পেমেন্ট নির্দেশনা</h4>
+                        <p>রকেট নম্বর: <strong>০১৯১২৩৪৫৬৭৮</strong> (পার্সোনাল)</p>
+                        <ol>
+                            <li>রকেট অ্যাপ বা ডায়াল *322# ওপেন করুন</li>
+                            <li>"সেন্ড মানি" অপশন সিলেক্ট করুন</li>
+                            <li>আমাদের নম্বর ০১৯১২৩৪৫৬৭৮ এন্টার করুন</li>
+                            <li>টাকার পরিমাণ এন্টার করুন</li>
+                            <li>রেফারেন্স এ "মাদ্রাসা" লিখুন</li>
+                            <li>আপনার পিন এন্টার করুন</li>
+                        </ol>
+                    </div>
+                    
+                    <!-- ব্যাংক ইনফো -->
+                    <div id="bank-info" style="display: none;">
+                        <h4 style="margin-top: 10px; color: #1a6836;">ব্যাংক ট্রান্সফার নির্দেশনা</h4>
+                        <p>ব্যাংক: <strong>ইসলামী ব্যাংক বাংলাদেশ লিমিটেড</strong></p>
+                        <p>শাখা: <strong>সিলেট শাখা</strong></p>
+                        <p>অ্যাকাউন্ট নাম: <strong>মূলি পাড়া কওমি মাদ্রাসা</strong></p>
+                        <p>অ্যাকাউন্ট নম্বর: <strong>20501234567801</strong></p>
+                        <p><strong>নোট:</strong> ট্রান্সফার করার পর, অনুগ্রহ করে ট্রানজেকশন আইডি সহ আমাদের ০১৭১২৩৪৫৬৭৮ নম্বরে কল করুন।</p>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="message" style="display: block; margin-bottom: 5px; font-weight: bold;">মন্তব্য (ঐচ্ছিক):</label>
+                    <textarea id="message" rows="3" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 3px;"></textarea>
+                </div>
+                
+                <div>
+                    <button type="button" onclick="submitDonation()" class="btn" style="width: 100%;">অনুদান সম্পন্ন করুন</button>
+                </div>
+            </form>
+            
+            <div id="donation-success" style="display: none; margin-top: 20px; background-color: #e8f5e9; padding: 15px; border-radius: 5px; text-align: center;">
+                <h3 style="color: #1a6836; margin-bottom: 10px;">ধন্যবাদ!</h3>
+                <p>আপনার অনুদানের জন্য আন্তরিক ধন্যবাদ। আপনার অবদান মাদ্রাসার উন্নয়নে সাহায্য করবে।</p>
+                <p>আল্লাহ আপনার অবদানকে কবুল করুন।</p>
+            </div>
+        </div>
+    </div>
+</div>// অনলাইন চাঁদা বাটন ক্লিক
+buttons[6].addEventListener('click', function() {
+    document.getElementById('dashboard').style.display = 'none';
+    document.getElementById('online-donation').style.display = 'block';
+});
+
+// পেমেন্ট মেথড পরিবর্তন ইভেন্ট
+document.getElementById('payment-method').addEventListener('change', function() {
+    const method = this.value;
+    document.getElementById('payment-info').style.display = method ? 'block' : 'none';
+    
+    // সব পেমেন্ট ইনফো বন্ধ করি
+    document.getElementById('bkash-info').style.display = 'none';
+    document.getElementById('nagad-info').style.display = 'none';
+    document.getElementById('rocket-info').style.display = 'none';
+    document.getElementById('bank-info').style.display = 'none';
+    
+    // নির্বাচিত পেমেন্ট ইনফো দেখাই
+    if(method) {
+        document.getElementById(method + '-info').style.display = 'block';
+    }
+});
+
+// অনুদান ফর্ম সাবমিট
+function submitDonation() {
+    const name = document.getElementById('name').value;
+    const mobile = document.getElementById('mobile').value;
+    const amount = document.getElementById('amount').value;
+    const method = document.getElementById('payment-method').value;
+    
+    // ভ্যালিডেশন চেক
+    if(!name || !mobile || !amount || !method) {
+        alert('অনুগ্রহ করে সব তথ্য পূরণ করুন।');
+        return;
+    }
+    
+    // ফর্ম লুকাই
+    document.getElementById('donation-form').style.display = 'none';
+    // সাকসেস মেসেজ দেখাই
+    document.getElementById('donation-success').style.display = 'block';
+}
         });
-        
         // ড্যাশবোর্ডে ফিরে যাওয়ার ফাংশন
-        function showDashboard() {
-            document.getElementById('dashboard').style.display = 'block';
-            document.getElementById('student-details').style.display = 'none';
-            document.getElementById('teacher-details').style.display = 'none';
-            document.getElementById('class-routine').style.display = 'none';
-            document.getElementById('exam-results').style.display = 'none';
-            document.getElementById('attendance-record').style.display = 'none';
-            document.getElementById('financial-record').style.display = 'none';
-        }
-    </script>
-</body>
-</html>
+function showDashboard() {
+    document.getElementById('dashboard').style.display = 'block';
+    document.getElementById('student-details').style.display = 'none';
+    document.getElementById('teacher-details').style.display = 'none';
+    document.getElementById('class-routine').style.display = 'none';
+    document.getElementById('exam-results').style.display = 'none';
+    document.getElementById('attendance-record').style.display = 'none';
+    document.getElementById('financial-record').style.display = 'none';
+    document.getElementById('online-donation').style.display = 'none';
+}
+       
