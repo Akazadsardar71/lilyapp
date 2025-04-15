@@ -111,265 +111,448 @@
     <footer>
         <p>&copy; মাদ্রাসা ম্যানেজমেন্ট সিস্টেম - মূলি পাড়া কওমি</p>
     </footer>
-</body><!-- ছাত্র তথ্য পেজ -->
-<div id="student-details" style="display: none;" class="container">
-    <button onclick="showDashboard()" class="btn" style="margin-bottom: 15px;">← ফিরে যান</button>
-    <h2>ছাত্র তথ্য</h2>
-    <div class="card">
-        <table border="1" style="width: 100%; border-collapse: collapse;">
-            <thead>
-                <tr style="background-color: #1a6836; color: white;">
-                    <th style="padding: 8px;">রোল</th>
-                    <th style="padding: 8px;">নাম</th>
-                    <th style="padding: 8px;">শ্রেণী</th>
-                    <th style="padding: 8px;">পিতার নাম</th>
-                    <th style="padding: 8px;">মোবাইল</th>
-                    <th style="padding: 8px;">ঠিকানা</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="padding: 8px;">১</td>
-                    <td style="padding: 8px;">আব্দুল্লাহ</td>
-                    <td style="padding: 8px;">৫ম</td>
-                    <td style="padding: 8px;">আবদুর রহমান</td>
-                    <td style="padding: 8px;">০১৭১২৩৪৫৬৭৮</td>
-                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
-                </tr>
-                <tr style="background-color: #f2f2f2;">
-                    <td style="padding: 8px;">২</td>
-                    <td style="padding: 8px;">মোহাম্মদ হাসান</td>
-                    <td style="padding: 8px;">৪র্থ</td>
-                    <td style="padding: 8px;">আলী আহমেদ</td>
-                    <td style="padding: 8px;">০১৮১২৩৪৫৬৭৮</td>
-                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
-                </tr>
-                <tr>
-                    <td style="padding: 8px;">৩</td>
-                    <td style="padding: 8px;">ফারহান আহমেদ</td>
-                    <td style="padding: 8px;">৬ষ্ঠ</td>
-                    <td style="padding: 8px;">ফরিদ আহমেদ</td>
-                    <td style="padding: 8px;">০১৯১২৩৪৫৬৭৮</td>
-                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
-                </tr>
-                <tr style="background-color: #f2f2f2;">
-                    <td style="padding: 8px;">৪</td>
-                    <td style="padding: 8px;">সাদিয়া খানম</td>
-                    <td style="padding: 8px;">৩য়</td>
-                    <td style="padding: 8px;">সাইফুল ইসলাম</td>
-                    <td style="padding: 8px;">০১৬১২৩৪৫৬৭৮</td>
-                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
-                </tr>
-                <tr>
-                    <td style="padding: 8px;">৫</td>
-                    <td style="padding: 8px;">রাহিম আলী</td>
-                    <td style="padding: 8px;">৫ম</td>
-                    <td style="padding: 8px;">করিম আলী</td>
-                    <td style="padding: 8px;">০১৫১২৩৪৫৬৭৮</td>
-                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div><!-- শিক্ষক তথ্য পেজ -->
-<div id="teacher-details" style="display: none;" class="container">
-    <button onclick="showDashboard()" class="btn" style="margin-bottom: 15px;">← ফিরে যান</button>
-    <h2>শিক্ষক তথ্য</h2>
-    <div class="card">
-        <table border="1" style="width: 100%; border-collapse: collapse;">
-            <thead>
-                <tr style="background-color: #1a6836; color: white;">
-                    <th style="padding: 8px;">আইডি</th>
-                    <th style="padding: 8px;">নাম</th>
-                    <th style="padding: 8px;">পদবি</th>
-                    <th style="padding: 8px;">শিক্ষাগত যোগ্যতা</th>
-                    <th style="padding: 8px;">মোবাইল</th>
-                    <th style="padding: 8px;">ঠিকানা</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="padding: 8px;">১</td>
-                    <td style="padding: 8px;">মাওলানা আবদুল করিম</td>
-                    <td style="padding: 8px;">প্রধান শিক্ষক</td>
-                    <td style="padding: 8px;">কামিল (হাদিস)</td>
-                    <td style="padding: 8px;">০১৭১২৩৪৫৬৭৮</td>
-                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
-                </tr>
-                <tr style="background-color: #f2f2f2;">
-                    <td style="padding: 8px;">২</td>
-                    <td style="padding: 8px;">মাওলানা মোহাম্মদ আলী</td>
-                    <td style="padding: 8px;">সহকারী শিক্ষক</td>
-                    <td style="padding: 8px;">কামিল (ফিকাহ)</td>
-                    <td style="padding: 8px;">০১৮১২৩৪৫৬৭৮</td>
-                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
-                </tr>
-                <tr>
-                    <td style="padding: 8px;">৩</td>
-                    <td style="padding: 8px;">মাওলানা ফজলু রহমান</td>
-                    <td style="padding: 8px;">শিক্ষক</td>
-                    <td style="padding: 8px;">ফাজিল</td>
-                    <td style="padding: 8px;">০১৯১২৩৪৫৬৭৮</td>
-                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
-                </tr>
-                <tr style="background-color: #f2f2f2;">
-                    <td style="padding: 8px;">৪</td>
-                    <td style="padding: 8px;">মাওলানা আকবর হোসেন</td>
-                    <td style="padding: 8px;">শিক্ষক</td>
-                    <td style="padding: 8px;">ফাজিল</td>
-                    <td style="padding: 8px;">০১৬১২৩৪৫৬৭৮</td>
-                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div><!-- ক্লাস রুটিন পেজ -->
-<div id="class-routine" style="display: none;" class="container">
-    <button onclick="showDashboard()" class="btn" style="margin-bottom: 15px;">← ফিরে যান</button>
-    <h2>ক্লাস রুটিন</h2>
-    <div class="card">
-        <h3>৫ম শ্রেণী রুটিন</h3>
-        <table border="1" style="width: 100%; border-collapse: collapse;">
-            <thead>
-                <tr style="background-color: #1a6836; color: white;">
-                    <th style="padding: 8px;">দিন</th>
-                    <th style="padding: 8px;">১ম পিরিয়ড</th>
-                    <th style="padding: 8px;">২য় পিরিয়ড</th>
-                    <th style="padding: 8px;">৩য় পিরিয়ড</th>
-                    <th style="padding: 8px;">৪র্থ পিরিয়ড</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="padding: 8px;">শনিবার</td>
-                    <td style="padding: 8px;">কুরআন</td>
-                    <td style="padding: 8px;">হাদিস</td>
-                    <td style="padding: 8px;">ফিকাহ</td>
-                    <td style="padding: 8px;">আরবি</td>
-                </tr>
-                <tr style="background-color: #f2f2f2;">
-                    <td style="padding: 8px;">রবিবার</td>
-                    <td style="padding: 8px;">হাদিস</td>
-                    <td style="padding: 8px;">আকাইদ</td>
-                    <td style="padding: 8px;">কুরআন</td>
-                    <td style="padding: 8px;">বাংলা</td>
-                </tr>
-                <tr>
-                    <td style="padding: 8px;">সোমবার</td>
-                    <td style="padding: 8px;">ফিকাহ</td>
-                    <td style="padding: 8px;">কুরআন</td>
-                    <td style="padding: 8px;">আরবি</td>
-                    <td style="padding: 8px;">ইংরেজি</td>
-                </tr>
-                <tr style="background-color: #f2f2f2;">
-                    <td style="padding: 8px;">মঙ্গলবার</td>
-                    <td style="padding: 8px;">আরবি</td>
-                    <td style="padding: 8px;">হাদিস</td>
-                    <td style="padding: 8px;">কুরআন</td>
-                    <td style="padding: 8px;">আকাইদ</td>
-                </tr>
-                <tr>
-                    <td style="padding: 8px;">বুধবার</td>
-                    <td style="padding: 8px;">কুরআন</td>
-                    <td style="padding: 8px;">আরবি</td>
-                    <td style="padding: 8px;">হাদিস</td>
-                    <td style="padding: 8px;">গণিত</td>
-                </tr>
-                <tr style="background-color: #f2f2f2;">
-                    <td style="padding: 8px;">বৃহস্পতিবার</td>
-                    <td style="padding: 8px;">আকাইদ</td>
-                    <td style="padding: 8px;">ফিকাহ</td>
-                    <td style="padding: 8px;">কুরআন</td>
-                    <td style="padding: 8px;">হাদিস</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-<!-- ক্লাস রুটিন পেজ -->
-<div id="class-routine" style="display: none;" class="container">
-    <button onclick="showDashboard()" class="btn" style="margin-bottom: 15px;">← ফিরে যান</button>
-    <h2>ক্লাস রুটিন</h2>
-    <div class="card">
-        <h3>৫ম শ্রেণী রুটিন</h3>
-        <table border="1" style="width: 100%; border-collapse: collapse;">
-            <thead>
-                <tr style="background-color: #1a6836; color: white;">
-                    <th style="padding: 8px;">দিন</th>
-                    <th style="padding: 8px;">১ম পিরিয়ড</th>
-                    <th style="padding: 8px;">২য় পিরিয়ড</th>
-                    <th style="padding: 8px;">৩য় পিরিয়ড</th>
-                    <th style="padding: 8px;">৪র্থ পিরিয়ড</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="padding: 8px;">শনিবার</td>
-                    <td style="padding: 8px;">কুরআন</td>
-                    <td style="padding: 8px;">হাদিস</td>
-                    <td style="padding: 8px;">ফিকাহ</td>
-                    <td style="padding: 8px;">আরবি</td>
-                </tr>
-                <tr style="background-color: #f2f2f2;">
-                    <td style="padding: 8px;">রবিবার</td>
-                    <td style="padding: 8px;">হাদিস</td>
-                    <td style="padding: 8px;">আকাইদ</td>
-                    <td style="padding: 8px;">কুরআন</td>
-                    <td style="padding: 8px;">বাংলা</td>
-                </tr>
-                <tr>
-                    <td style="padding: 8px;">সোমবার</td>
-                    <td style="padding: 8px;">ফিকাহ</td>
-                    <td style="padding: 8px;">কুরআন</td>
-                    <td style="padding: 8px;">আরবি</td>
-                    <td style="padding: 8px;">ইংরেজি</td>
-                </tr>
-                <tr style="background-color: #f2f2f2;">
-                    <td style="padding: 8px;">মঙ্গলবার</td>
-                    <td style="padding: 8px;">আরবি</td>
-                    <td style="padding: 8px;">হাদিস</td>
-                    <td style="padding: 8px;">কুরআন</td>
-                    <td style="padding: 8px;">আকাইদ</td>
-                </tr>
-                <tr>
-                    <td style="padding: 8px;">বুধবার</td>
-                    <td style="padding: 8px;">কুরআন</td>
-                    <td style="padding: 8px;">আরবি</td>
-                    <td style="padding: 8px;">হাদিস</td>
-                    <td style="padding: 8px;">গণিত</td>
-                </tr>
-                <tr style="background-color: #f2f2f2;">
-                    <td style="padding: 8px;">বৃহস্পতিবার</td>
-                    <td style="padding: 8px;">আকাইদ</td>
-                    <td style="padding: 8px;">ফিকাহ</td>
-                    <td style="padding: 8px;">কুরআন</td>
-                    <td style="padding: 8px;">হাদিস</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-<script>// শিক্ষক তথ্য বাটন ক্লিক
-        buttons[1].addEventListener('click', function() {
-            document.getElementById('dashboard').style.display = 'none';
-            document.getElementById('teacher-details').style.display = 'block';
-        });
-    // বাটন ক্লিক ফাংশন
-    document.addEventListener('DOMContentLoaded', function() {
-        // সব বাটন খুঁজে বের করি
-        const buttons = document.querySelectorAll('.btn');
-        
-        // প্রথম বাটন (ছাত্র তথ্য) এ ক্লিক ইভেন্ট যোগ করি
-        buttons[0].addEventListener('click', function() {
-            document.getElementById('dashboard').style.display = 'none';
-            document.getElementById('student-details').style.display = 'block';
-        });
-    });
     
-    // ড্যাশবোর্ডে ফিরে যাওয়ার ফাংশন
-    function showDashboard() {
-        document.getElementById('dashboard').style.display = 'block';
-        document.getElementById('student-details').style.display = 'none';
-    }
-</script>
+    <!-- ছাত্র তথ্য পেজ -->
+    <div id="student-details" style="display: none;" class="container">
+        <button onclick="showDashboard()" class="btn" style="margin-bottom: 15px;">← ফিরে যান</button>
+        <h2>ছাত্র তথ্য</h2>
+        <div class="card">
+            <table border="1" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background-color: #1a6836; color: white;">
+                        <th style="padding: 8px;">রোল</th>
+                        <th style="padding: 8px;">নাম</th>
+                        <th style="padding: 8px;">শ্রেণী</th>
+                        <th style="padding: 8px;">পিতার নাম</th>
+                        <th style="padding: 8px;">মোবাইল</th>
+                        <th style="padding: 8px;">ঠিকানা</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 8px;">১</td>
+                        <td style="padding: 8px;">আব্দুল্লাহ</td>
+                        <td style="padding: 8px;">৫ম</td>
+                        <td style="padding: 8px;">আবদুর রহমান</td>
+                        <td style="padding: 8px;">০১৭১২৩৪৫৬৭৮</td>
+                        <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                    </tr>
+                    <tr style="background-color: #f2f2f2;">
+                        <td style="padding: 8px;">২</td>
+                        <td style="padding: 8px;">মোহাম্মদ হাসান</td>
+                        <td style="padding: 8px;">৪র্থ</td>
+                        <td style="padding: 8px;">আলী আহমেদ</td>
+                        <td style="padding: 8px;">০১৮১২৩৪৫৬৭৮</td>
+                        <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px;">৩</td>
+                        <td style="padding: 8px;">ফারহান আহমেদ</td>
+                        <td style="padding: 8px;">৬ষ্ঠ</td>
+                        <td style="padding: 8px;">ফরিদ আহমেদ</td>
+                        <td style="padding: 8px;">০১৯১২৩৪৫৬৭৮</td>
+                        <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                    </tr>
+                    <tr style="background-color: #f2f2f2;">
+                        <td style="padding: 8px;">৪</td>
+                        <td style="padding: 8px;">সাদিয়া খানম</td>
+                        <td style="padding: 8px;">৩য়</td>
+                        <td style="padding: 8px;">সাইফুল ইসলাম</td>
+                        <td style="padding: 8px;">০১৬১২৩৪৫৬৭৮</td>
+                        <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px;">৫</td>
+                        <td style="padding: 8px;">রাহিম আলী</td>
+                        <td style="padding: 8px;">৫ম</td>
+                        <td style="padding: 8px;">করিম আলী</td>
+                        <td style="padding: 8px;">০১৫১২৩৪৫৬৭৮</td>
+                        <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- শিক্ষক তথ্য পেজ -->
+    <div id="teacher-details" style="display: none;" class="container">
+        <button onclick="showDashboard()" class="btn" style="margin-bottom: 15px;">← ফিরে যান</button>
+        <h2>শিক্ষক তথ্য</h2>
+        <div class="card">
+            <table border="1" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background-color: #1a6836; color: white;">
+                        <th style="padding: 8px;">আইডি</th>
+                        <th style="padding: 8px;">নাম</th>
+                        <th style="padding: 8px;">পদবি</th>
+                        <th style="padding: 8px;">শিক্ষাগত যোগ্যতা</th>
+                        <th style="padding: 8px;">মোবাইল</th>
+                        <th style="padding: 8px;">ঠিকানা</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 8px;">১</td>
+                        <td style="padding: 8px;">মাওলানা আবদুল করিম</td>
+                        <td style="padding: 8px;">প্রধান শিক্ষক</td>
+                        <td style="padding: 8px;">কামিল (হাদিস)</td>
+                        <td style="padding: 8px;">০১৭১২৩৪৫৬৭৮</td>
+                        <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                    </tr>
+                    <tr style="background-color: #f2f2f2;">
+                        <td style="padding: 8px;">২</td>
+                        <td style="padding: 8px;">মাওলানা মোহাম্মদ আলী</td>
+                        <td style="padding: 8px;">সহকারী শিক্ষক</td>
+                        <td style="padding: 8px;">কামিল (ফিকাহ)</td>
+                        <td style="padding: 8px;">০১৮১২৩৪৫৬৭৮</td>
+                        <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px;">৩</td>
+                        <td style="padding: 8px;">মাওলানা ফজলুর রহমান</td>
+                        <td style="padding: 8px;">শিক্ষক</td>
+                        <td style="padding: 8px;">ফাজিল</td>
+                        <td style="padding: 8px;">০১৯১২৩৪৫৬৭৮</td>
+                        <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                    </tr>
+                    <tr style="background-color: #f2f2f2;">
+                        <td style="padding: 8px;">৪</td>
+                        <td style="padding: 8px;">মাওলানা আকবর হোসেন</td>
+                        <td style="padding: 8px;">শিক্ষক</td>
+                        <td style="padding: 8px;">ফাজিল</td>
+                        <td style="padding: 8px;">০১৬১২৩৪৫৬৭৮</td>
+                        <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ক্লাস রুটিন পেজ -->
+    <div id="class-routine" style="display: none;" class="container">
+        <button onclick="showDashboard()" class="btn" style="margin-bottom: 15px;">← ফিরে যান</button>
+        <h2>ক্লাস রুটিন</h2>
+        <div class="card">
+            <h3>৫ম শ্রেণী রুটিন</h3>
+            <table border="1" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background-color: #1a6836; color: white;">
+                        <th style="padding: 8px;">দিন</th>
+                        <th style="padding: 8px;">১ম পিরিয়ড</th>
+                        <th style="padding: 8px;">২য় পিরিয়ড</th>
+                        <th style="padding: 8px;">৩য় পিরিয়ড</th>
+                        <th style="padding: 8px;">৪র্থ পিরিয়ড</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 8px;">শনিবার</td>
+                        <td style="padding: 8px;">কুরআন</td>
+                        <td style="padding: 8px;">হাদিস</td>
+                        <td style="padding: 8px;">ফিকাহ</td>
+                        <td style="padding: 8px;">আরবি</td>
+                    </tr>
+                    <tr style="background-color: #f2f2f2;">
+                        <td style="padding: 8px;">রবিবার</td>
+                        <td style="padding: 8px;">হাদিস</td>
+                        <td style="padding: 8px;">আকাইদ</td>
+                        <td style="padding: 8px;">কুরআন</td>
+                        <td style="padding: 8px;">বাংলা</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px;">সোমবার</td>
+                        <td style="padding: 8px;">ফিকাহ</td>
+                        <td style="padding: 8px;">কুরআন</td>
+                        <td style="padding: 8px;">আরবি</td>
+                        <td style="padding: 8px;">ইংরেজি</td>
+                    </tr>
+                    <tr style="background-color: #f2f2f2;">
+                        <td style="padding: 8px;">মঙ্গলবার</td>
+                        <td style="padding: 8px;">আরবি</td>
+                        <td style="padding: 8px;">হাদিস</td>
+                        <td style="padding: 8px;">কুরআন</td>
+                        <td style="padding: 8px;">আকাইদ</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px;">বুধবার</td>
+                        <td style="padding: 8px;">কুরআন</td>
+                        <td style="padding: 8px;">আরবি</td>
+                        <td style="padding: 8px;">হাদিস</td>
+                        <td style="padding: 8px;">গণিত</td>
+                    </tr>
+                    <tr style="background-color: #f2f2f2;">
+                        <td style="padding: 8px;">বৃহস্পতিবার</td>
+                        <td style="padding: 8px;">আকাইদ</td>
+                        <td style="padding: 8px;">ফিকাহ</td>
+                        <td style="padding: 8px;">কুরআন</td>
+                        <td style="padding: 8px;">হাদিস</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- পরীক্ষার ফলাফল পেজ -->
+    <div id="exam-results" style="display: none;" class="container">
+        <button onclick="showDashboard()" class="btn" style="margin-bottom: 15px;">← ফিরে যান</button>
+        <h2>পরীক্ষার ফলাফল</h2>
+        <div class="card">
+            <h3>বার্ষিক পরীক্ষা ২০২৪ - ৫ম শ্রেণী</h3>
+            <table border="1" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background-color: #1a6836; color: white;">
+                        <th style="padding: 8px;">রোল</th>
+                        <th style="padding: 8px;">নাম</th>
+                        <th style="padding: 8px;">কুরআন</th>
+                        <th style="padding: 8px;">হাদিস</th>
+                        <th style="padding: 8px;">ফিকাহ</th>
+                        <th style="padding: 8px;">আরবি</th>
+                        <th style="padding: 8px;">মোট</th>
+                        <th style="padding: 8px;">গ্রেড</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 8px;">১</td>
+                        <td style="padding: 8px;">আব্দুল্লাহ</td>
+                        <td style="padding: 8px;">৮৫</td>
+                        <td style="padding: 8px;">৭৮</td>
+                        <td style="padding: 8px;">৮২</td>
+                        <td style="padding: 8px;">৭৫</td>
+                        <td style="padding: 8px;">৩২০</td>
+                        <td style="padding: 8px;">A+</td>
+                    </tr>
+                    <tr style="background-color: #f2f2f2;">
+                        <td style="padding: 8px;">৫</td>
+                        <td style="padding: 8px;">রাহিম আলী</td>
+                        <td style="padding: 8px;">৭৫</td>
+                        <td style="padding: 8px;">৮০</td>
+                        <td style="padding: 8px;">৭২</td>
+                        <td style="padding: 8px;">৭৮</td>
+                        <td style="padding: 8px;">৩০৫</td>
+                        <td style="padding: 8px;">A</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px;">৭</td>
+                        <td style="padding: 8px;">আমির হামজা</td>
+                        <td style="padding: 8px;">৭০</td>
+                        <td style="padding: 8px;">৬৮</td>
+                        <td style="padding: 8px;">৭৫</td>
+                        <td style="padding: 8px;">৭০</td>
+                        <td style="padding: 8px;">২৮৩</td>
+                        <td style="padding: 8px;">A-</td>
+                    </tr>
+                    <tr style="background-color: #f2f2f2;">
+                        <td style="padding: 8px;">৯</td>
+                        <td style="padding: 8px;">হাসিব আহমেদ</td>
+                        <td style="padding: 8px;">৬৫</td>
+                        <td style="padding: 8px;">৭২</td>
+                        <td style="padding: 8px;">৬৮</td>
+                        <td style="padding: 8px;">৭০</td>
+                        <td style="padding: 8px;">২৭৫</td>
+                        <td style="padding: 8px;">B+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- হাজিরা রেকর্ড পেজ -->
+    <div id="attendance-record" style="display: none;" class="container">
+        <button onclick="showDashboard()" class="btn" style="margin-bottom: 15px;">← ফিরে যান</button>
+        <h2>হাজিরা রেকর্ড</h2>
+        <div class="card">
+            <h3>৫ম শ্রেণী হাজিরা - জুলাই ২০২৪</h3>
+            <table border="1" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background-color: #1a6836; color: white;">
+                        <th style="padding: 8px;">রোল</th>
+                        <th style="padding: 8px;">নাম</th>
+                        <th style="padding: 8px;">১</th>
+                        <th style="padding: 8px;">২</th>
+                        <th style="padding: 8px;">৩</th>
+                        <th style="padding: 8px;">৪</th>
+                        <th style="padding: 8px;">৫</th>
+                        <th style="padding: 8px;">৬</th>
+                        <th style="padding: 8px;">৭</th>
+                        <th style="padding: 8px;">উপস্থিতি %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 8px;">১</td>
+                        <td style="padding: 8px;">আব্দুল্লাহ</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✗</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">৮৫.৭%</td>
+                    </tr>
+                    <tr style="background-color: #f2f2f2;">
+                        <td style="padding: 8px;">৫</td>
+                        <td style="padding: 8px;">রাহিম আলী</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✗</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">৮৫.৭%</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px;">৭</td>
+                        <td style="padding: 8px;">আমির হামজা</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✗</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✗</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">৭১.৪%</td>
+                    </tr>
+                    <tr style="background-color: #f2f2f2;">
+                        <td style="padding: 8px;">৯</td>
+                        <td style="padding: 8px;">হাসিব আহমেদ</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">✓</td>
+                        <td style="padding: 8px;">১০০%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- আর্থিক হিসাব পেজ -->
+    <div id="financial-record" style="display: none;" class="container">
+        <button onclick="showDashboard()" class="btn" style="margin-bottom: 15px;">← ফিরে যান</button>
+        <h2>আর্থিক হিসাব</h2>
+        <div class="card">
+            <h3>আয়-ব্যয় হিসাব - জুলাই ২০২৪</h3>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                <div style="width: 48%; border: 1px solid #ddd; padding: 10px; border-radius: 5px;">
+                    <h4 style="color: #1a6836;">আয়</h4>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr>
+                            <th style="text-align: left; padding: 8px;">বিবরণ</th>
+                            <th style="text-align: right; padding: 8px;">টাকা</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px;">ছাত্র বেতন</td>
+                            <td style="text-align: right; padding: 8px;">৫০,০০০</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px;">দান-সাদকা</td>
+                            <td style="text-align: right; padding: 8px;">৩০,০০০</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px;">সরকারি অনুদান</td>
+                            <td style="text-align: right; padding: 8px;">২০,০০০</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; font-weight: bold;">মোট আয়</td>
+                            <td style="text-align: right; padding: 8px; font-weight: bold;">১,০০,০০০</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="width: 48%; border: 1px solid #ddd; padding: 10px; border-radius: 5px;">
+                    <h4 style="color: #1a6836;">ব্যয়</h4>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr>
+                            <th style="text-align: left; padding: 8px;">বিবরণ</th>
+                            <th style="text-align: right; padding: 8px;">টাকা</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px;">শিক্ষক বেতন</td>
+                            <td style="text-align: right; padding: 8px;">৪০,০০০</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px;">বিদ্যুৎ বিল</td>
+                            <td style="text-align: right; padding: 8px;">৫,০০০</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px;">শিক্ষা উপকরণ</td>
+                            <td style="text-align: right; padding: 8px;">১৫,০০০</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px;">মেরামত কাজ</td>
+                            <td style="text-align: right; padding: 8px;">১০,০০০</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; font-weight: bold;">মোট ব্যয়</td>
+                            <td style="text-align: right; padding: 8px; font-weight: bold;">৭০,০০০</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div style="background-color: #e8f5e9; padding: 10px; border-radius: 5px;">
+                <h4>মাসিক অবশিষ্ট: <span style="color: green; font-weight: bold;">৩০,০০০ টাকা</span></h4>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // বাটন ক্লিক ফাংশন
+        document.addEventListener('DOMContentLoaded', function() {
+            // সব বাটন খুঁজে বের করি
+            const buttons = document.querySelectorAll('.btn');
+            
+            // প্রথম বাটন (ছাত্র তথ্য) এ ক্লিক ইভেন্ট যোগ করি
+            buttons[0].addEventListener('click', function() {
+                document.getElementById('dashboard').style.display = 'none';
+                document.getElementById('student-details').style.display = 'block';
+            });
+            
+            // শিক্ষক তথ্য বাটন ক্লিক
+            buttons[1].addEventListener('click', function() {
+                document.getElementById('dashboard').style.display = 'none';
+                document.getElementById('teacher-details').style.display = 'block';
+            });
+            
+            // ক্লাস রুটিন বাটন ক্লিক
+            buttons[2].addEventListener('click', function() {
+                document.getElementById('dashboard').style.display = 'none';
+                document.getElementById('class-routine').style.display = 'block';
+            });
+            
+            // পরীক্ষার ফলাফল বাটন ক্লিক
+            buttons[3].addEventListener('click', function() {
+                document.getElementById('dashboard').style.display = 'none';
+                document.getElementById('exam-results').style.display = 'block';
+            });
+            
+            // হাজিরা রেকর্ড বাটন ক্লিক
+            buttons[4].addEventListener('click', function() {
+                document.getElementById('dashboard').style.display = 'none';
+                document.getElementById('attendance-record').style.display = 'block';
+            });
+            
+            // আর্থিক হিসাব বাটন ক্লিক
+            buttons[5].addEventListener('click', function() {
+                document.getElementById('dashboard').style.display = 'none';
+                document.getElementById('financial-record').style.display = 'block';
+            });
+        });
+        
+        // ড্যাশবোর্ডে ফিরে যাওয়ার ফাংশন
+        function showDashboard() {
+            document.getElementById('dashboard').style.display = 'block';
+            document.getElementById('student-details').style.display = 'none';
+            document.getElementById('teacher-details').style.display = 'none';
+            document.getElementById('class-routine').style.display = 'none';
+            document.getElementById('exam-results').style.display = 'none';
+            document.getElementById('attendance-record').style.display = 'none';
+            document.getElementById('financial-record').style.display = 'none';
+        }
+    </script>
+</body>
 </html>
