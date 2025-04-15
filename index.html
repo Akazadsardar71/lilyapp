@@ -1,65 +1,443 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>মুন্সি পাড়া কওমি মাদ্রাসা</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মাদ্রাসা ওয়েবসাইট</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>মুন্সি পাড়া কওমি মাদ্রাসা</h1>
-    <nav>
-      <ul>
-        <li><a href="#">হোম</a></li>
-        <li><a href="#">আমাদের সম্পর্কে</a></li>
-        <li><a href="#">বিভাগসমূহ</a></li>
-        <li><a href="#">ভর্তি</a></li>
-        <li><a href="#">নোটিশ</a></li>
-        <li><a href="#">যোগাযোগ</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- হেডার সেকশন -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> ০১৭১২-৩৪৫৬৭৮</span>
+                    <span><i class="fas fa-envelope"></i> info@madrasah.edu.bd</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="logo-area">
+            <div class="container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="মাদ্রাসা লোগো">
+                    <div class="logo-text">
+                        <h1>দারুস সালাম কামিল মাদ্রাসা</h1>
+                        <p>প্রতিষ্ঠিত: ১৯৮৫</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="main-menu">
+            <div class="container">
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="menu">
+                    <li><a href="index.html" class="active">হোম</a></li>
+                    <li class="dropdown">
+                        <a href="#">আমাদের সম্পর্কে <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">পরিচিতি</a></li>
+                            <li><a href="history.html">ইতিহাস</a></li>
+                            <li><a href="mission.html">লক্ষ্য ও উদ্দেশ্য</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">একাডেমিক <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="programs.html">শিক্ষা কার্যক্রম</a></li>
+                            <li><a href="curriculum.html">পাঠ্যক্রম</a></li>
+                            <li><a href="routine.html">ক্লাস রুটিন</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="teachers.html">শিক্ষক-কর্মচারী</a></li>
+                    <li><a href="students.html">ছাত্র-ছাত্রী</a></li>
+                    <li><a href="admission.html">ভর্তি তথ্য</a></li>
+                    <li><a href="notice.html">নোটিশ বোর্ড</a></li>
+                    <li><a href="gallery.html">ফটো গ্যালারি</a></li>
+                    <li><a href="contact.html">যোগাযোগ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-  <section class="hero">
-    <h2>স্বাগতম!</h2>
-    <p>মুন্সি পাড়া কওমি মাদ্রাসার অফিসিয়াল ওয়েবসাইটে আপনাকে স্বাগতম।</p>
-  </section>
+    <!-- স্লাইডার সেকশন -->
+    <section class="slider">
+        <div class="slider-container">
+            <div class="slide active">
+                <img src="images/slider1.jpg" alt="মাদ্রাসা ক্যাম্পাস">
+                <div class="slide-caption">
+                    <h2>আসসালামু আলাইকুম</h2>
+                    <p>দারুস সালাম কামিল মাদ্রাসায় আপনাকে স্বাগতম</p>
+                    <a href="admission.html" class="btn">ভর্তি সম্পর্কে জানুন</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/slider2.jpg" alt="শিক্ষা কার্যক্রম">
+                <div class="slide-caption">
+                    <h2>পূর্ণাঙ্গ ইসলামী শিক্ষা</h2>
+                    <p>দেশের শ্রেষ্ঠ আলেম তৈরির প্রতিষ্ঠান</p>
+                    <a href="programs.html" class="btn">আরো জানুন</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/slider3.jpg" alt="লাইব্রেরি">
+                <div class="slide-caption">
+                    <h2>আধুনিক সুযোগ-সুবিধা</h2>
+                    <p>সমৃদ্ধ লাইব্রেরি, ল্যাব এবং আবাসিক ব্যবস্থা</p>
+                    <a href="facilities.html" class="btn">সুযোগ-সুবিধা দেখুন</a>
+                </div>
+            </div>
+            <div class="slider-buttons">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
 
-  <section class="about">
-    <h2>আমাদের সম্পর্কে</h2>
-    <p>মুন্সি পাড়া কওমি মাদ্রাসা একটি অরাজনৈতিক দ্বীনি শিক্ষা প্রতিষ্ঠান, যেখানে হিফজ, নূরানি, কিতাব বিভাগে পাঠদান করা হয়।</p>
-  </section>
+    <!-- সম্পর্কে সেকশন -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>আমাদের পরিচিতি</h2>
+                <span class="divider"></span>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/about.jpg" alt="মাদ্রাসা ভবন">
+                </div>
+                <div class="about-text">
+                    <h3>দারুস সালাম কামিল মাদ্রাসা</h3>
+                    <p>দারুস সালাম কামিল মাদ্রাসা ১৯৮৫ সালে প্রতিষ্ঠিত একটি প্রাচীন শিক্ষা প্রতিষ্ঠান। এই মাদ্রাসা ধর্মীয় শিক্ষার পাশাপাশি আধুনিক শিক্ষা প্রদানের মাধ্যমে যুগোপযোগী আলেম তৈরিতে নিবেদিত। বর্তমানে মাদ্রাসায় ইবতেদায়ী থেকে কামিল পর্যন্ত শিক্ষা দেওয়া হয়।</p>
+                    <p>আমাদের প্রতিষ্ঠানে রয়েছে অভিজ্ঞ শিক্ষক মন্ডলী, আধুনিক লাইব্রেরি, কম্পিউটার ল্যাব এবং আবাসিক সুবিধা। এছাড়াও মাদ্রাসায় নিয়মিত বিভিন্ন ইসলামী অনুষ্ঠান ও প্রতিযোগিতা আয়োজন করা হয়।</p>
+                    <a href="about.html" class="btn">আরো জানুন</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="departments">
-    <h2>বিভাগসমূহ</h2>
-    <ul>
-      <li>নূরানী বিভাগ</li>
-      <li>হিফজ বিভাগ</li>
-      <li>কিতাব বিভাগ</li>
-    </ul>
-  </section>
+    <!-- বৈশিষ্ট্য সেকশন -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>আমাদের বৈশিষ্ট্য</h2>
+                <span class="divider"></span>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>পূর্ণাঙ্গ শিক্ষা</h3>
+                    <p>ইসলামী ও আধুনিক শিক্ষার সমন্বয়ে পূর্ণাঙ্গ শিক্ষা ব্যবস্থা।</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <h3>হিফজুল কুরআন</h3>
+                    <p>কুরআন হিফজের জন্য আলাদা বিভাগ ও বিশেষ প্রশিক্ষণ।</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>অভিজ্ঞ শিক্ষক</h3>
+                    <p>দেশের নামী মাদ্রাসা থেকে পাশ করা অভিজ্ঞ শিক্ষক মন্ডলী।</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>আবাসিক সুবিধা</h3>
+                    <p>ছাত্রদের জন্য নিরাপদ ও আধুনিক আবাসিক ব্যবস্থা।</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="admission">
-    <h2>ভর্তি ফর্ম</h2>
-    <form>
-      <input type="text" placeholder="নাম" required>
-      <input type="text" placeholder="অভিভাবকের নাম" required>
-      <input type="tel" placeholder="মোবাইল নম্বর" required>
-      <button type="submit">জমা দিন</button>
-    </form>
-  </section>
+    <!-- নোটিশ সেকশন -->
+    <section class="notice-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>সর্বশেষ নোটিশ</h2>
+                <span class="divider"></span>
+            </div>
+            <div class="notice-container">
+                <div class="notice-list">
+                    <div class="notice-item">
+                        <div class="notice-date">
+                            <span class="day">০৫</span>
+                            <span class="month">জুলাই</span>
+                        </div>
+                        <div class="notice-content">
+                            <h3>ভর্তি পরীক্ষার ফলাফল প্রকাশ</h3>
+                            <p>২০২৪-২০২৫ শিক্ষাবর্ষের ভর্তি পরীক্ষার ফলাফল প্রকাশ করা হয়েছে। ফলাফল জানতে অফিসে যোগাযোগ করুন।</p>
+                            <a href="#" class="read-more">বিস্তারিত</a>
+                        </div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-date">
+                            <span class="day">০১</span>
+                            <span class="month">জুলাই</span>
+                        </div>
+                        <div class="notice-content">
+                            <h3>নতুন শিক্ষাবর্ষের ক্লাস শুরু</h3>
+                            <p>আগামী ১০ জুলাই থেকে নতুন শিক্ষাবর্ষের ক্লাস শুরু হবে। সকল ছাত্রকে যথাসময়ে উপস্থিত থাকার জন্য অনুরোধ করা হচ্ছে।</p>
+                            <a href="#" class="read-more">বিস্তারিত</a>
+                        </div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-date">
+                            <span class="day">২৫</span>
+                            <span class="month">জুন</span>
+                        </div>
+                        <div class="notice-content">
+                            <h3>বার্ষিক পরীক্ষার রুটিন প্রকাশ</h3>
+                            <p>২০২৩-২০২৪ শিক্ষাবর্ষের বার্ষিক পরীক্ষার রুটিন প্রকাশ করা হয়েছে। ওয়েবসাইট থেকে ডাউনলোড করুন।</p>
+                            <a href="#" class="read-more">বিস্তারিত</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="notice-more">
+                    <a href="notice.html" class="btn">সব নোটিশ দেখুন</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="notice">
-    <h2>নোটিশ বোর্ড</h2>
-    <ul>
-      <li>রমজান মাসের ছুটির নোটিশ প্রকাশিত হয়েছে।</li>
-      <li>ভর্তি চলছে - আসন সংখ্যা সীমিত।</li>
-    </ul>
-  </section>
+    <!-- কাউন্টার সেকশন -->
+    <section class="counter-section">
+        <div class="container">
+            <div class="counter-grid">
+                <div class="counter-item">
+                    <div class="counter-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="counter-number" data-count="1500">0</div>
+                    <div class="counter-text">ছাত্র-ছাত্রী</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="counter-number" data-count="65">0</div>
+                    <div class="counter-text">শিক্ষক-শিক্ষিকা</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="counter-number" data-count="8">0</div>
+                    <div class="counter-text">শিক্ষা বিভাগ</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="counter-number" data-count="38">0</div>
+                    <div class="counter-text">বছরের অভিজ্ঞতা</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>© ২০২৫ মুন্সি পাড়া কওমি মাদ্রাসা। সর্বস্বত্ব সংরক্ষিত।</p>
-  </footer>
+    <!-- গ্যালারি সেকশন -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>ফটো গ্যালারি</h2>
+                <span class="divider"></span>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/gallery1.jpg" alt="মাদ্রাসা ক্যাম্পাস">
+                    <div class="gallery-overlay">
+                        <h3>মাদ্রাসা ক্যাম্পাস</h3>
+                        <a href="images/gallery1.jpg" class="gallery-view"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery2.jpg" alt="ক্লাসরুম">
+                    <div class="gallery-overlay">
+                        <h3>আধুনিক ক্লাসরুম</h3>
+                        <a href="images/gallery2.jpg" class="gallery-view"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery3.jpg" alt="বিতর্ক প্রতিযোগিতা">
+                    <div class="gallery-overlay">
+                        <h3>বিতর্ক প্রতিযোগিতা</h3>
+                        <a href="images/gallery3.jpg" class="gallery-view"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery4.jpg" alt="কুরআন প্রতিযোগিতা">
+                    <div class="gallery-overlay">
+                        <h3>কুরআন প্রতিযোগিতা</h3>
+                        <a href="images/gallery4.jpg" class="gallery-view"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery5.jpg" alt="লাইব্রেরি">
+                    <div class="gallery-overlay">
+                        <h3>আধুনিক লাইব্রেরি</h3>
+                        <a href="images/gallery5.jpg" class="gallery-view"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery6.jpg" alt="মিলাদ মাহফিল">
+                    <div class="gallery-overlay">
+                        <h3>মিলাদ মাহফিল</h3>
+                        <a href="images/gallery6.jpg" class="gallery-view"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-more">
+                <a href="gallery.html" class="btn">আরো ছবি দেখুন</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- যোগাযোগ সেকশন -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>যোগাযোগ করুন</h2>
+                <span class="divider"></span>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>যোগাযোগের ঠিকানা</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>ঠিকানা</h4>
+                            <p>দারুস সালাম কামিল মাদ্রাসা, মাইজদী কোর্ট, নোয়াখালী</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>ফোন</h4>
+                            <p>০১৭১২-৩৪৫৬৭৮, ০১৮১৭-৯৮৭৬৫৪</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>ইমেইল</h4>
+                            <p>info@madrasah.edu.bd</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>অফিস সময়</h4>
+                            <p>শনিবার - বৃহস্পতিবার: সকাল ৯:০০ - দুপুর ৩:০০</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>মেসেজ পাঠান</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="আপনার নাম" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="ইমেইল ঠিকানা" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="বিষয়" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="আপনার মেসেজ" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">মেসেজ পাঠান</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- যোগাযোগ ম্যাপ -->
+    <section class="map-section">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.5272959563116!2d90.83721731498315!3d22.868095885034188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3754af712aaac0b7%3A0x4bab3fb29148dbab!2sNoakhali%2C%20Bangladesh!5e0!3m2!1sen!2sus!4v1628089877446!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- ফুটার সেকশন -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>দারুস সালাম কামিল মাদ্রাসা</h3>
+                    <p>দারুস সালাম কামিল মাদ্রাসা একটি প্রাচীন শিক্ষা প্রতিষ্ঠান যা ১৯৮৫ সাল থেকে ইসলামী শিক্ষা প্রদান করে আসছে। আমাদের লক্ষ্য সমাজে যোগ্য আলেম তৈরি করা।</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                        <li><a href="programs.html">শিক্ষা কার্যক্রম</a></li>
+                        <li><a href="admission.html">ভর্তি তথ্য</a></li>
+                        <li><a href="notice.html">নোটিশ বোর্ড</a></li>
+                        <li><a href="gallery.html">ফটো গ্যালারি</a></li>
+                        <li><a href="contact.html">যোগাযোগ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ পেজ</h3>
+                    <ul>
+                        <li><a href="teachers.html">শিক্ষক-কর্মচারী</a></li>
+                        <li><a href="result.html">ফলাফল</a></li>
+                        <li><a href="routine.html">ক্লাস রুটিন</a></li>
+                        <li><a href="events.html">অনুষ্ঠান</a></li>
+                        <li><a href="facilities.html">সুযোগ-সুবিধা</a></li>
+                        <li><a href="faq.html">সাধারণ প্রশ্ন</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>যোগাযোগ তথ্য</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> দারুস সালাম কামিল মাদ্রাসা, মাইজদী কোর্ট, নোয়াখালী</p>
+                    <p><i class="fas fa-phone-alt"></i> ০১৭১২-৩৪৫৬৭৮, ০১৮১৭-৯৮৭৬৫৪</p>
+                    <p><i class="fas fa-envelope"></i> info@madrasah.edu.bd</p>
+                    <p><i class="fas fa-clock"></i> শনিবার - বৃহস্পতিবার: সকাল ৯:০০ - দুপুর ৩:০০</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; ২০২৪ দারুস সালাম কামিল মাদ্রাসা। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- স্ক্রল টু টপ বাটন -->
+    <a href="#" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
