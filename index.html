@@ -171,9 +171,65 @@
             </tbody>
         </table>
     </div>
+</div><!-- শিক্ষক তথ্য পেজ -->
+<div id="teacher-details" style="display: none;" class="container">
+    <button onclick="showDashboard()" class="btn" style="margin-bottom: 15px;">← ফিরে যান</button>
+    <h2>শিক্ষক তথ্য</h2>
+    <div class="card">
+        <table border="1" style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background-color: #1a6836; color: white;">
+                    <th style="padding: 8px;">আইডি</th>
+                    <th style="padding: 8px;">নাম</th>
+                    <th style="padding: 8px;">পদবি</th>
+                    <th style="padding: 8px;">শিক্ষাগত যোগ্যতা</th>
+                    <th style="padding: 8px;">মোবাইল</th>
+                    <th style="padding: 8px;">ঠিকানা</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 8px;">১</td>
+                    <td style="padding: 8px;">মাওলানা আবদুল করিম</td>
+                    <td style="padding: 8px;">প্রধান শিক্ষক</td>
+                    <td style="padding: 8px;">কামিল (হাদিস)</td>
+                    <td style="padding: 8px;">০১৭১২৩৪৫৬৭৮</td>
+                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                </tr>
+                <tr style="background-color: #f2f2f2;">
+                    <td style="padding: 8px;">২</td>
+                    <td style="padding: 8px;">মাওলানা মোহাম্মদ আলী</td>
+                    <td style="padding: 8px;">সহকারী শিক্ষক</td>
+                    <td style="padding: 8px;">কামিল (ফিকাহ)</td>
+                    <td style="padding: 8px;">০১৮১২৩৪৫৬৭৮</td>
+                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px;">৩</td>
+                    <td style="padding: 8px;">মাওলানা ফজলু রহমান</td>
+                    <td style="padding: 8px;">শিক্ষক</td>
+                    <td style="padding: 8px;">ফাজিল</td>
+                    <td style="padding: 8px;">০১৯১২৩৪৫৬৭৮</td>
+                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                </tr>
+                <tr style="background-color: #f2f2f2;">
+                    <td style="padding: 8px;">৪</td>
+                    <td style="padding: 8px;">মাওলানা আকবর হোসেন</td>
+                    <td style="padding: 8px;">শিক্ষক</td>
+                    <td style="padding: 8px;">ফাজিল</td>
+                    <td style="padding: 8px;">০১৬১২৩৪৫৬৭৮</td>
+                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
-<script>
+<script>// শিক্ষক তথ্য বাটন ক্লিক
+        buttons[1].addEventListener('click', function() {
+            document.getElementById('dashboard').style.display = 'none';
+            document.getElementById('teacher-details').style.display = 'block';
+        });
     // বাটন ক্লিক ফাংশন
     document.addEventListener('DOMContentLoaded', function() {
         // সব বাটন খুঁজে বের করি
