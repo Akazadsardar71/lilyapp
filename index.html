@@ -111,5 +111,85 @@
     <footer>
         <p>&copy; মাদ্রাসা ম্যানেজমেন্ট সিস্টেম - মূলি পাড়া কওমি</p>
     </footer>
-</body>
+</body><!-- ছাত্র তথ্য পেজ -->
+<div id="student-details" style="display: none;" class="container">
+    <button onclick="showDashboard()" class="btn" style="margin-bottom: 15px;">← ফিরে যান</button>
+    <h2>ছাত্র তথ্য</h2>
+    <div class="card">
+        <table border="1" style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background-color: #1a6836; color: white;">
+                    <th style="padding: 8px;">রোল</th>
+                    <th style="padding: 8px;">নাম</th>
+                    <th style="padding: 8px;">শ্রেণী</th>
+                    <th style="padding: 8px;">পিতার নাম</th>
+                    <th style="padding: 8px;">মোবাইল</th>
+                    <th style="padding: 8px;">ঠিকানা</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 8px;">১</td>
+                    <td style="padding: 8px;">আব্দুল্লাহ</td>
+                    <td style="padding: 8px;">৫ম</td>
+                    <td style="padding: 8px;">আবদুর রহমান</td>
+                    <td style="padding: 8px;">০১৭১২৩৪৫৬৭৮</td>
+                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                </tr>
+                <tr style="background-color: #f2f2f2;">
+                    <td style="padding: 8px;">২</td>
+                    <td style="padding: 8px;">মোহাম্মদ হাসান</td>
+                    <td style="padding: 8px;">৪র্থ</td>
+                    <td style="padding: 8px;">আলী আহমেদ</td>
+                    <td style="padding: 8px;">০১৮১২৩৪৫৬৭৮</td>
+                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px;">৩</td>
+                    <td style="padding: 8px;">ফারহান আহমেদ</td>
+                    <td style="padding: 8px;">৬ষ্ঠ</td>
+                    <td style="padding: 8px;">ফরিদ আহমেদ</td>
+                    <td style="padding: 8px;">০১৯১২৩৪৫৬৭৮</td>
+                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                </tr>
+                <tr style="background-color: #f2f2f2;">
+                    <td style="padding: 8px;">৪</td>
+                    <td style="padding: 8px;">সাদিয়া খানম</td>
+                    <td style="padding: 8px;">৩য়</td>
+                    <td style="padding: 8px;">সাইফুল ইসলাম</td>
+                    <td style="padding: 8px;">০১৬১২৩৪৫৬৭৮</td>
+                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px;">৫</td>
+                    <td style="padding: 8px;">রাহিম আলী</td>
+                    <td style="padding: 8px;">৫ম</td>
+                    <td style="padding: 8px;">করিম আলী</td>
+                    <td style="padding: 8px;">০১৫১২৩৪৫৬৭৮</td>
+                    <td style="padding: 8px;">মূলি পাড়া, সিলেট</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    // বাটন ক্লিক ফাংশন
+    document.addEventListener('DOMContentLoaded', function() {
+        // সব বাটন খুঁজে বের করি
+        const buttons = document.querySelectorAll('.btn');
+        
+        // প্রথম বাটন (ছাত্র তথ্য) এ ক্লিক ইভেন্ট যোগ করি
+        buttons[0].addEventListener('click', function() {
+            document.getElementById('dashboard').style.display = 'none';
+            document.getElementById('student-details').style.display = 'block';
+        });
+    });
+    
+    // ড্যাশবোর্ডে ফিরে যাওয়ার ফাংশন
+    function showDashboard() {
+        document.getElementById('dashboard').style.display = 'block';
+        document.getElementById('student-details').style.display = 'none';
+    }
+</script>
 </html>
