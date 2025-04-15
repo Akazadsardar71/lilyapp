@@ -8,10 +8,29 @@
 }
 
 body {
-  background-color: #f8f8f8; /* হালকা ধূসর */
-  background-image: Logo_20250415_235329_0000.png;
-  background-repeat: repeat;
-  background-opacity: 0.2; /* হালকা প্যাটার্ন */
+    background-color: #f8f9fa;
+    background-image: url('https://img.freepik.com/free-vector/seamless-islamic-pattern-background_1159-6090.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: 200px 200px;
+    background-position: center;
+    opacity: 0.9;
+}
+
+.container, .content-area, main {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+header, footer {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 }
 
