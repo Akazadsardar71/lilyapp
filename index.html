@@ -3,393 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>মাদ্রাসা ম্যানেজমেন্ট সিস্টেম</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>মাদ্রাসা ম্যানেজমেন্ট সিস্টেম - মূলি পাড়া কওমি মাদ্রাসা</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #1a6836;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            color: #1a6836;
+        }
+        .btn {
+            background-color: #1a6836;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .dashboard-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        footer {
+            background-color: #1a6836;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>মাদ্রাসা ম্যানেজমেন্ট সিস্টেম</h1>
+        <p>মূলি পাড়া কওমি মাদ্রাসা</p>
+    </header>
+
     <div class="container">
-        <!-- হেডার সেকশন -->
-        <header>
-            <div class="header-content">
-                <div class="logo">
-                    <h1>মাদ্রাসা ম্যানেজমেন্ট সিস্টেম</h1>
-                    <p>মুন্সি পাড়া কওমি মাদ্রাসা</p>
+        <!-- ড্যাশবোর্ড -->
+        <div id="dashboard">
+            <h2>ড্যাশবোর্ড</h2>
+            
+            <div class="dashboard-section">
+                <div class="card">
+                    <h3>ছাত্র তথ্য</h3>
+                    <p>মোট ছাত্র: <strong>120</strong></p>
+                    <button class="btn">বিস্তারিত দেখুন</button>
                 </div>
-                <div class="header-right">
-                    <button id="logout-btn" class="hidden">লগআউট</button>
+                
+                <div class="card">
+                    <h3>শিক্ষক তথ্য</h3>
+                    <p>মোট শিক্ষক: <strong>15</strong></p>
+                    <button class="btn">বিস্তারিত দেখুন</button>
                 </div>
-            </div>
-        </header>
-
-        <!-- লগইন ফর্ম -->
-        <div id="login-section">
-            <div class="form-container">
-                <h2>লগইন করুন</h2>
-                <form id="login-form">
-                    <div class="form-group">
-                        <label for="username">ইউজারনেম:</label>
-                        <input type="text" id="username" name="username" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">পাসওয়ার্ড:</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-                    <button type="submit" class="btn">লগইন</button>
-                </form>
-            </div>
-        </div>
-
-        <!-- মূল ড্যাশবোর্ড -->
-        <div id="dashboard" class="hidden">
-            <div class="sidebar">
-                <ul class="menu">
-                    <li class="menu-item active" data-target="home-content">
-                        <i class="fas fa-home"></i> হোম
-                    </li>
-                    <li class="menu-item" data-target="students-content">
-                        <i class="fas fa-user-graduate"></i> ছাত্র ব্যবস্থাপনা
-                    </li>
-                    <li class="menu-item" data-target="teachers-content">
-                        <i class="fas fa-chalkboard-teacher"></i> শিক্ষক ব্যবস্থাপনা
-                    </li>
-                    <li class="menu-item" data-target="attendance-content">
-                        <i class="fas fa-clipboard-check"></i> হাজিরা ব্যবস্থাপনা
-                    </li>
-                    <li class="menu-item" data-target="exam-content">
-                        <i class="fas fa-file-alt"></i> পরীক্ষা ব্যবস্থাপনা
-                    </li>
-                    <li class="menu-item" data-target="fee-content">
-                        <i class="fas fa-money-bill-wave"></i> ফি ব্যবস্থাপনা
-                    </li>
-                    <li class="menu-item" data-target="expense-content">
-                        <i class="fas fa-calculator"></i> খরচ হিসাব
-                    </li>
-                    <li class="menu-item" data-target="donations-content">
-                        <i class="fas fa-donate"></i> চাঁদা আদায়
-                    </li>
-                    <li class="menu-item" data-target="committee-content">
-                        <i class="fas fa-users"></i> মাদ্রাসা কমিটি
-                    </li>
-                    <li class="menu-item" data-target="union-committee-content">
-                        <i class="fas fa-people-arrows"></i> ইউনিয়ন কমিটি
-                    </li>
-                    <li class="menu-item" data-target="union-donations-content">
-                        <i class="fas fa-hand-holding-usd"></i> ইউনিয়ন চাঁদা
-                    </li>
-                </ul>
-            </div>
-
-            <div class="content-area">
-                <!-- হোম কনটেন্ট -->
-                <div id="home-content" class="content active">
-                    <h2>ড্যাশবোর্ড</h2>
-                    <div class="stats-container">
-                        <div class="stat-card">
-                            <i class="fas fa-user-graduate"></i>
-                            <h3>মোট ছাত্র</h3>
-                            <p id="student-count">১২৫</p>
-                        </div>
-                        <div class="stat-card">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                            <h3>মোট শিক্ষক</h3>
-                            <p id="teacher-count">১২</p>
-                        </div>
-                        <div class="stat-card">
-                            <i class="fas fa-clipboard-check"></i>
-                            <h3>আজকের হাজিরা</h3>
-                            <p id="attendance-rate">৯২%</p>
-                        </div>
-                        <div class="stat-card">
-                            <i class="fas fa-money-bill-wave"></i>
-                            <h3>মাসের আয়</h3>
-                            <p id="monthly-income">৫০,০০০ টাকা</p>
-                        </div>
-                    </div>
-
-                    <div class="recent-section">
-                        <h3>সাম্প্রতিক নোটিশ</h3>
-                        <div class="notice-container" id="notice-list">
-                            <div class="notice-item">
-                                <h4>বার্ষিক পরীক্ষার তারিখ ঘোষণা</h4>
-                                <p>আগামী ১৫ অক্টোবর থেকে বার্ষিক পরীক্ষা শুরু হবে। সকল ছাত্র-ছাত্রীকে প্রস্তুতি নিতে অনুরোধ করা হচ্ছে।</p>
-                                <span class="notice-date">২০/০৯/২০২৩</span>
-                            </div>
-                            <div class="notice-item">
-                                <h4>অভিভাবক সভা</h4>
-                                <p>আগামী শুক্রবার (২৯/০৯/২০২৩) সকাল ১০টায় অভিভাবক সভা অনুষ্ঠিত হবে।</p>
-                                <span class="notice-date">১৮/০৯/২০২৩</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="prayer-times">
-                        <h3>আজকের নামাজের সময়সূচি</h3>
-                        <div class="prayer-times-container">
-                            <div class="prayer-time">
-                                <h4>ফজর</h4>
-                                <p>৪:১৫</p>
-                            </div>
-                            <div class="prayer-time">
-                                <h4>জোহর</h4>
-                                <p>১২:১৫</p>
-                            </div>
-                            <div class="prayer-time">
-                                <h4>আসর</h4>
-                                <p>৪:০৫</p>
-                            </div>
-                            <div class="prayer-time">
-                                <h4>মাগরিব</h4>
-                                <p>৫:৫৫</p>
-                            </div>
-                            <div class="prayer-time">
-                                <h4>এশা</h4>
-                                <p>৭:১৫</p>
-                            </div>
-                        </div>
-                    </div>
+                
+                <div class="card">
+                    <h3>ক্লাস রুটিন</h3>
+                    <p>সাপ্তাহিক ক্লাস রুটিন</p>
+                    <button class="btn">বিস্তারিত দেখুন</button>
                 </div>
-
-                <!-- ছাত্র ব্যবস্থাপনা কনটেন্ট -->
-                <div id="students-content" class="content">
-                    <h2>ছাত্র ব্যবস্থাপনা</h2>
-                    <div class="action-bar">
-                        <button class="btn add-btn" id="add-student-btn">নতুন ছাত্র যোগ করুন</button>
-                        <div class="search-container">
-                            <input type="text" id="student-search" placeholder="ছাত্র খুঁজুন...">
-                            <button class="search-btn"><i class="fas fa-search"></i></button>
-                        </div>
-                    </div>
-                    <div class="table-container">
-                        <table id="students-table">
-                            <thead>
-                                <tr>
-                                    <th>আইডি</th>
-                                    <th>নাম</th>
-                                    <th>পিতার নাম</th>
-                                    <th>ক্লাস</th>
-                                    <th>রোল</th>
-                                    <th>মোবাইল</th>
-                                    <th>অবস্থা</th>
-                                    <th>কার্যক্রম</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>ST-২০২৩-০০১</td>
-                                    <td>মাহমুদুল হাসান</td>
-                                    <td>আবদুর রহিম</td>
-                                    <td>৮ম শ্রেণী</td>
-                                    <td>১০১</td>
-                                    <td>০১৭১২৩৪৫৬৭৮</td>
-                                    <td><span class="status active">সক্রিয়</span></td>
-                                    <td>
-                                        <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
-                                        <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>ST-২০২৩-০০২</td>
-                                    <td>সাদিয়া আহমেদ</td>
-                                    <td>জাহিদ হোসেন</td>
-                                    <td>৫ম শ্রেণী</td>
-                                    <td>২০৫</td>
-                                    <td>০১৮১২৩৪৫৬৭৮</td>
-                                    <td><span class="status active">সক্রিয়</span></td>
-                                    <td>
-                                        <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
-                                        <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                
+                <div class="card">
+                    <h3>পরীক্ষার ফলাফল</h3>
+                    <p>সর্বশেষ পরীক্ষার ফলাফল</p>
+                    <button class="btn">বিস্তারিত দেখুন</button>
                 </div>
-
-                <!-- শিক্ষক ব্যবস্থাপনা কনটেন্ট -->
-                <div id="teachers-content" class="content">
-                    <h2>শিক্ষক ব্যবস্থাপনা</h2>
-                    <div class="action-bar">
-                        <button class="btn add-btn">নতুন শিক্ষক যোগ করুন</button>
-                        <div class="search-container">
-                            <input type="text" placeholder="শিক্ষক খুঁজুন...">
-                            <button class="search-btn"><i class="fas fa-search"></i></button>
-                        </div>
-                    </div>
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>আইডি</th>
-                                    <th>নাম</th>
-                                    <th>যোগ্যতা</th>
-                                    <th>বিষয়</th>
-                                    <th>যোগদানের তারিখ</th>
-                                    <th>মোবাইল</th>
-                                    <th>ঠিকানা</th>
-                                    <th>কার্যক্রম</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>TE-২০২১-০০১</td>
-                                    <td>আবু বকর সিদ্দিক</td>
-                                    <td>আলিম, কামিল</td>
-                                    <td>আরবি ভাষা ও সাহিত্য</td>
-                                    <td>১৫/০১/২০২১</td>
-                                    <td>০১৭১২৩৪৫৬৭৯</td>
-                                    <td>বাড়ি #২৩, রোড #৫, মোহাম্মদপুর, ঢাকা</td>
-                                    <td>
-                                        <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
-                                        <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                
+                <div class="card">
+                    <h3>হাজিরা রেকর্ড</h3>
+                    <p>শিক্ষক ও ছাত্র হাজিরা</p>
+                    <button class="btn">বিস্তারিত দেখুন</button>
                 </div>
-
-                <!-- হাজিরা ব্যবস্থাপনা -->
-                <div id="attendance-content" class="content">
-                    <h2>হাজিরা ব্যবস্থাপনা</h2>
-                    <p>এখানে হাজিরা সংক্রান্ত তথ্য থাকবে</p>
-                </div>
-
-                <!-- পরীক্ষা ব্যবস্থাপনা -->
-                <div id="exam-content" class="content">
-                    <h2>পরীক্ষা ব্যবস্থাপনা</h2>
-                    <p>এখানে পরীক্ষা সংক্রান্ত তথ্য থাকবে</p>
-                </div>
-
-                <!-- ফি ব্যবস্থাপনা -->
-                <div id="fee-content" class="content">
-                    <h2>ফি ব্যবস্থাপনা</h2>
-                    <p>এখানে ফি সংক্রান্ত তথ্য থাকবে</p>
-                </div>
-
-                <!-- খরচ হিসাব -->
-                <div id="expense-content" class="content">
-                    <h2>খরচ হিসাব</h2>
-                    <p>এখানে খরচ সংক্রান্ত তথ্য থাকবে</p>
-                </div>
-
-                <!-- চাঁদা আদায় -->
-                <div id="donations-content" class="content">
-                    <h2>চাঁদা আদায়</h2>
-                    <p>এখানে চাঁদা সংক্রান্ত তথ্য থাকবে</p>
-                </div>
-
-                <!-- মাদ্রাসা কমিটি -->
-                <div id="committee-content" class="content">
-                    <h2>মাদ্রাসা কমিটি</h2>
-                    <p>এখানে মাদ্রাসা কমিটি সদস্যদের তথ্য থাকবে</p>
-                </div>
-
-                <!-- ইউনিয়ন কমিটি -->
-                <div id="union-committee-content" class="content">
-                    <h2>ইসলামী আন্দোলন বাংলাদেশ ১ নং লক্ষীপুর ইউনিয়ন কমিটি</h2>
-                    <p>এখানে ইউনিয়ন কমিটি সদস্যদের তথ্য থাকবে</p>
-                </div>
-
-                <!-- ইউনিয়ন চাঁদা -->
-                <div id="union-donations-content" class="content">
-                    <h2>ইসলামী আন্দোলন বাংলাদেশ ১ নং লক্ষীপুর ইউনিয়ন মাসিক চাঁদা আদায়</h2>
-                    <p>এখানে ইউনিয়ন চাঁদা সংক্রান্ত তথ্য থাকবে</p>
+                
+                <div class="card">
+                    <h3>আর্থিক হিসাব</h3>
+                    <p>আয়-ব্যয় হিসাব</p>
+                    <button class="btn">বিস্তারিত দেখুন</button>
                 </div>
             </div>
         </div>
-
-        <!-- ছাত্র যোগ করার মডাল -->
-        <div id="add-student-modal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h2>নতুন ছাত্র যোগ করুন</h2>
-                <form id="add-student-form">
-                    <div class="form-group">
-                        <label for="student-id">ছাত্র আইডি:</label>
-                        <input type="text" id="student-id" name="student-id" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="student-name">নাম:</label>
-                        <input type="text" id="student-name" name="student-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="father-name">পিতার নাম:</label>
-                        <input type="text" id="father-name" name="father-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="mother-name">মাতার নাম:</label>
-                        <input type="text" id="mother-name" name="mother-name" required>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="class-name">শ্রেণী:</label>
-                            <select id="class-name" name="class-name" required>
-                                <option value="">শ্রেণী নির্বাচন করুন</option>
-                                <option value="১ম শ্রেণী">১ম শ্রেণী</option>
-                                <option value="২য় শ্রেণী">২য় শ্রেণী</option>
-                                <option value="৩য় শ্রেণী">৩য় শ্রেণী</option>
-                                <option value="৪র্থ শ্রেণী">৪র্থ শ্রেণী</option>
-                                <option value="৫ম শ্রেণী">৫ম শ্রেণী</option>
-                                <option value="৬ষ্ঠ শ্রেণী">৬ষ্ঠ শ্রেণী</option>
-                                <option value="৭ম শ্রেণী">৭ম শ্রেণী</option>
-                                <option value="৮ম শ্রেণী">৮ম শ্রেণী</option>
-                                <option value="৯ম শ্রেণী">৯ম শ্রেণী</option>
-                                <option value="১০ম শ্রেণী">১০ম শ্রেণী</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="roll-number">রোল নম্বর:</label>
-                            <input type="text" id="roll-number" name="roll-number">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="dob">জন্ম তারিখ:</label>
-                        <input type="text" id="dob" name="dob" placeholder="দিন/মাস/বছর">
-                    </div>
-                    <div class="form-group">
-                        <label for="address">ঠিকানা:</label>
-                        <textarea id="address" name="address" rows="2"></textarea>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="student-mobile">মোবাইল নম্বর:</label>
-                            <input type="text" id="student-mobile" name="student-mobile">
-                        </div>
-                        <div class="form-group">
-                            <label for="guardian-mobile">অভিভাবকের মোবাইল:</label>
-                            <input type="text" id="guardian-mobile" name="guardian-mobile">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="admission-date">ভর্তির তারিখ:</label>
-                            <input type="text" id="admission-date" name="admission-date" value="<?php echo date('d/m/Y'); ?>" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="status">অবস্থা:</label>
-                            <select id="status" name="status">
-                                <option value="সক্রিয়">সক্রিয়</option>
-                                <option value="নিষ্ক্রিয়">নিষ্ক্রিয়</option>
-                                <option value="অপেক্ষমান">অপেক্ষমান</option>
-                                <option value="স্থগিত">স্থগিত</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-btn-group">
-                        <button type="button" class="btn cancel-btn" id="cancel-add-student">বাতিল</button>
-                        <button type="submit" class="btn">সাবমিট</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- ফুটার সেকশন -->
-        <footer>
-            <p>&copy; <?php echo date('Y'); ?> মাদ্রাসা ম্যানেজমেন্ট সিস্টেম - মুন্সি পাড়া কওমি মাদ্রাসা</p>
-        </footer>
     </div>
 
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; মাদ্রাসা ম্যানেজমেন্ট সিস্টেম - মূলি পাড়া কওমি</p>
+    </footer>
 </body>
 </html>
