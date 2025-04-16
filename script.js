@@ -1,25 +1,13 @@
-// পপ-আপ মেসেজ ফাংশন
-function showAdmissionForm() {
-  alert(function submitForm(event) {
-  event.preventDefault(); // রিফ্রেশ বন্ধ রাখে
-  alert("আপনার ভর্তি ফর্ম সফলভাবে জমা হয়েছে! ইনশাআল্লাহ কর্তৃপক্ষ শীঘ্রই যোগাযোগ করবে।");
-}");
-}
+document.getElementById("paymentForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const amount = document.getElementById("amount").value;
 
-// ভবিষ্যতের জন্য একটা সিম্পল টাইম গ্রীট
-window.onload = function () {
-  const now = new Date();
-  const hour = now.getHours();
-  let message = "";
-
-  if (hour < 12) {
-    message = "সুপ্রভাত!";
-  } else if (hour < 18) {
-    message = "শুভ অপরাহ্ন!";
-  } else {
-    message = "শুভ সন্ধ্যা!";
-  }
-
-  console.log("স্বাগতম: " + message);
-};
-https://docs.google.com/spreadsheets/d/14z_mWO0Qy4-zRLLMcv8DBXzchQb81LYx3EBXr9G9TSc/edit?gid=0#gid=0
+  // এখানে আপনি আপনার পেমেন্ট গেটওয়ের API ব্যবহার করবেন (Bkash, Nagad, SSLCommerz ইত্যাদি)
+  alert(${name}, অনুগ্রহ করে ${amount} টাকা পেমেন্ট সম্পন্ন করুন!);
+  
+  // উদাহরণস্বরূপ: bkash link এ রিডাইরেক্ট
+  window.location.href = https://www.bkash.com/payment-link-example; // আপনার আসল লিংক বসান
+});
