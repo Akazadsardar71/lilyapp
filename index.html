@@ -3,111 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>মাদ্রাসা দারুল উলুম</title>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Hind Siliguri', sans-serif;
-      background-image: url('https://i.ibb.co/Tk8r5kx/madrasa-bg.jpg'); /* ব্যাকগ্রাউন্ড ছবি */
-      background-size: cover;
-      background-position: center;
-      color: #ffffff;
-    }
-    header {
-      background-color: rgba(0, 60, 90, 0.8);
-      padding: 20px;
-      text-align: center;
-    }
-    header img {
-      height: 80px;
-    }
-    h1 {
-      margin: 10px 0 0;
-      font-size: 2rem;
-    }
-    .content {
-      padding: 30px;
-      background-color: rgba(0, 0, 0, 0.5);
-      margin: 20px;
-      border-radius: 10px;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #1abc9c;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #16a085;
-    }
-  </style>
+  <title>অনলাইন পেমেন্ট ফর্ম</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="https://i.ibb.co/PM0bjvY/madrasa-logo.png" alt="Madrasah Logo">
-    <h1>মাদ্রাসা দারুল উলুম</h1>
-    <p>ইসলামী শিক্ষার একটি আধুনিক প্ল্যাটফর্ম</p>
-  </header>
-  <div class="content">
-    <h2>স্বাগতম!</h2>
-    <p>এই অ্যাপে আপনি ভর্তি ফর্ম পূরণ, চাঁদা প্রদানের তথ্য, শিক্ষক তালিকা ও আরও অনেক কিছু জানতে পারবেন।</p>
-    <button onclick="alert('শিগগিরই আসছে!')">ভর্তি ফর্ম দেখুন</button>
-  </div> class="content">
-  <h2>ভর্তি ফর্ম</h2>
-  <form onsubmit="submitForm(event)">
-    <label>নাম:</label><br>
-    <input type="text" name="name" required><br><br>
+  <div class="container">
+    <h2>অনলাইন পেমেন্ট</h2>
+    <form id="paymentForm">
+      <label for="name">আপনার নাম:</label>
+      <input type="text" id="name" required>
 
-    <label>পিতার নাম:</label><br>
-    <input type="text" name="father" required><br><br>
+      <label for="phone">মোবাইল নম্বর:</label>
+      <input type="tel" id="phone" required>
 
-    <label>মোবাইল নম্বর:</label><br>
-    <input type="tel" name="mobile" required><br><br>
+      <label for="amount">টাকার পরিমাণ:</label>
+      <input type="number" id="amount" required>
 
-    <label>ঠিকানা:</label><br>
-    <textarea name="address" rows="3" required></textarea><br><br>
+      <button type="submit">পেমেন্ট করুন</button>
+    </form>
+  </div>
 
-    <label>শ্রেণি:</label><br>
-    <select name="class" required>
-      <option value="">-- একটি নির্বাচন করুন --</option>
-      <option value="নুরানি">নুরানি</option>
-      <option value="হিফজ">হিফজ</option>
-      <option value="দাখিল">দাখিল</option>
-    </select><br><br>
-
-    <button type="submit">ফর্ম জমা দিন</button>
-  </form><form id="admissionForm">
-  <!-- আগের মতো ইনপুট ফিল্ডগুলো থাকবে -->
-  <button type="submit">ফর্ম জমা দিন</button>
-</form>
-
-<script>
-  const scriptURL = 'YOUR_WEB_APP_URL'; // এখানেই Google Apps Script URL বসান
-
-  document.getElementById("admissionForm").addEventListener("submit", e => {
-    e.preventDefault();
-    const form = e.target;
-    const data = {
-      name: form.name.value,
-      father: form.father.value,
-      mobile: form.mobile.value,
-      address: form.address.value,
-      class: form.class.value
-    };
-
-    fetch(scriptURL, {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: { 'Content-Type': 'application/json' }
-    })
-    .then(res => alert("আপনার তথ্য সফলভাবে জমা হয়েছে!"))
-    .catch(err => alert("ভুল হয়েছে! আবার চেষ্টা করুন।"));
-  });
-</script>
-</div>
+  <script src="script.js"></script>
 </body>
 </html>
