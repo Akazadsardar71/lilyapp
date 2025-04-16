@@ -1,47 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&display=swap');
-
 body {
-  margin: 0;
   font-family: 'Hind Siliguri', sans-serif;
-  background-image: url('https://i.ibb.co/Tk8r5kx/madrasa-bg.jpg'); /* ব্যাকগ্রাউন্ড ছবি */
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
+  background: linear-gradient(to right, #00b09b, #96c93d);
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
-header {
-  background-color: rgba(0, 60, 90, 0.8);
-  padding: 20px;
-  text-align: center;
-}
-
-header img {
-  height: 80px;
-}
-
-h1 {
-  margin: 10px 0 0;
-  font-size: 2rem;
-}
-
-.content {
+.container {
+  max-width: 400px;
+  margin: 50px auto;
   padding: 30px;
-  background-color: rgba(0, 0, 0, 0.5);
-  margin: 20px;
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #1abc9c;
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f39c12;
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
   cursor: pointer;
-  transition: 0.3s ease;
 }
 
 button:hover {
-  background-color: #16a085;
+  background-color: #d35400;
 }
