@@ -80,7 +80,34 @@
     </select><br><br>
 
     <button type="submit">ফর্ম জমা দিন</button>
-  </form>
+  </form><form id="admissionForm">
+  <!-- আগের মতো ইনপুট ফিল্ডগুলো থাকবে -->
+  <button type="submit">ফর্ম জমা দিন</button>
+</form>
+
+<script>
+  const scriptURL = 'YOUR_WEB_APP_URL'; // এখানেই Google Apps Script URL বসান
+
+  document.getElementById("admissionForm").addEventListener("submit", e => {
+    e.preventDefault();
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      father: form.father.value,
+      mobile: form.mobile.value,
+      address: form.address.value,
+      class: form.class.value
+    };
+
+    fetch(scriptURL, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: { 'Content-Type': 'application/json' }
+    })
+    .then(res => alert("আপনার তথ্য সফলভাবে জমা হয়েছে!"))
+    .catch(err => alert("ভুল হয়েছে! আবার চেষ্টা করুন।"));
+  });
+</script>
 </div>
 </body>
 </html>
