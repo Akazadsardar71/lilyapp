@@ -1,50 +1,53 @@
-body {
-  font-family: 'Hind Siliguri', sans-serif;
-  background: linear-gradient(to right, #00b09b, #96c93d);
-  color: #fff;
+
+  body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f5f5;
   margin: 0;
   padding: 0;
 }
 
 .container {
-  max-width: 400px;
+  max-width: 500px;
   margin: 50px auto;
-  padding: 30px;
-  background: rgba(0, 0, 0, 0.4);
+  padding: 25px;
+  background: white;
   border-radius: 10px;
-  box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-h2 {
+h1 {
   text-align: center;
-  margin-bottom: 20px;
+  color: #2c3e50;
 }
 
 label {
   display: block;
   margin-top: 15px;
+  margin-bottom: 5px;
 }
 
-input {
+input, select, button {
   width: 100%;
   padding: 10px;
-  margin-top: 5px;
+  margin-bottom: 10px;
   border-radius: 5px;
-  border: none;
+  border: 1px solid #ccc;
 }
 
 button {
-  margin-top: 20px;
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  background-color: #f39c12;
+  background-color: #27ae60;
   color: white;
-  border: none;
-  border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #d35400;
+  background-color: #219150;
+}
+
+.payment-info {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #ecf0f1;
+  border-left: 5px solid #27ae60;
 }
