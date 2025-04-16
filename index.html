@@ -2,45 +2,482 @@
 <html lang="bn">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>সর্দার পাড়া জামে মসজিদ</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            background-color: #f0f8ff; /* হালকা নীল ব্যাকগ্রাউন্ড */
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>লক্ষ্মীপুর মুন্সিপাড়া কওমি মাদ্রাসা</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>সর্দার পাড়া জামে মসজিদ</h1>
-        <p>মসজিদের জন্য আপনার খুশিমতো দান করুন</p>
-
-        <form id="donationForm">
-            <label for="name">আপনার নাম:</label>
-            <input type="text" id="name" required>
-
-            <label for="amount">পরিমাণ (৳):</label>
-            <input type="number" id="amount" required>
-
-            <label for="method">পেমেন্ট পদ্ধতি:</label>
-            <select id="method" required>
-                <option value="">-- সিলেক্ট করুন --</option>
-                <option value="bkash">বিকাশ</option>
-                <option value="nagad">নগদ</option>
-                <option value="rocket">রকেট</option>
-            </select>
-
-            <button type="submit">দান করুন</button>
-        </form>
-
-        <div class="payment-info" id="paymentInfo" style="display: none;">
-            <h3>পেমেন্ট করুন নিচের নম্বরে:</h3>
-            <p id="number"></p>
-            <p>পেমেন্ট করার পর মসজিদের ইমাম সাহেবকে জানাতে ভুলবেন না।</p>
+    <!-- হেডার সেকশন -->
+    <header class="main-header">
+        <div class="top-header">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> ০১৭১২-৩৪৫৬৭৮</span>
+                    <span><i class="fas fa-envelope"></i> info@lmkm.edu.bd</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
         </div>
-    </div>
+        
+        <div class="middle-header">
+            <div class="container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="মাদ্রাসা লোগো">
+                    <div class="logo-text">
+                        <h1>লক্ষ্মীপুর মুন্সিপাড়া কওমি মাদ্রাসা</h1>
+                        <p>প্রতিষ্ঠিত: ১৯৯৫</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="navigation-header">
+            <div class="container">
+                <nav class="main-nav">
+                    <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">হোম</a></li>
+                        <li class="dropdown">
+                            <a href="#">আমাদের সম্পর্কে <i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about.html">পরিচিতি</a></li>
+                                <li><a href="history.html">ইতিহাস</a></li>
+                                <li><a href="mission.html">লক্ষ্য ও উদ্দেশ্য</a></li>
+                                <li><a href="land-donors.html">জমি দাতার নাম</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">একাডেমিক <i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="admission-form.html">ভর্তি ফরম</a></li>
+                                <li><a href="teachers.html">শিক্ষক তালিকা</a></li>
+                                <li><a href="curriculum.html">পাঠ্যক্রম</a></li>
+                                <li><a href="routine.html">ক্লাস রুটিন</a></li>
+                                <li><a href="results.html">ফলাফল</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">প্রশাসন <i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="committee.html">ম্যানেজিং কমিটি</a></li>
+                                <li><a href="monthly-meeting.html">মাসিক মিটিং</a></li>
+                                <li><a href="rules.html">নিয়মাবলী</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="notice.html">নোটিশ বোর্ড</a></li>
+                        <li><a href="gallery.html">গ্যালারি</a></li>
+                        <li><a href="contact.html">যোগাযোগ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-    <script src="script.js"></script>
+    <!-- মূল কন্টেন্ট এরিয়া -->
+    <main>
+        <!-- স্লাইডার সেকশন -->
+        <section class="slider-section">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="images/slider1.jpg" alt="মাদ্রাসা ক্যাম্পাস">
+                    <div class="slide-content">
+                        <h2>ইসলামী শিক্ষার আলোকে আলোকিত হোক বাংলাদেশ</h2>
+                        <p>আধুনিক সুযোগ-সুবিধায় সজ্জিত আমাদের মাদ্রাসায় আপনার সন্তানকে ভর্তি করুন</p>
+                        <a href="admission-form.html" class="btn">ভর্তি সম্পর্কে জানুন</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/slider2.jpg" alt="ক্লাস রুম">
+                    <div class="slide-content">
+                        <h2>আধুনিক শিক্ষা ব্যবস্থা</h2>
+                        <p>ইসলামী ও আধুনিক শিক্ষার সমন্বয়ে গড়ে উঠুক আপনার সন্তান</p>
+                        <a href="curriculum.html" class="btn">আরো জানুন</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/slider3.jpg" alt="ছাত্রদের কার্যক্রম">
+                    <div class="slide-content">
+                        <h2>ইসলামী মূল্যবোধের শিক্ষা</h2>
+                        <p>আমাদের ছাত্রদের নৈতিক ও আধ্যাত্মিক উন্নয়নে বিশেষ গুরুত্ব দেওয়া হয়</p>
+                        <a href="about.html" class="btn">আমাদের সম্পর্কে</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </section>
+        
+        <!-- ওয়েলকাম সেকশন -->
+        <section class="welcome-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>স্বাগতম লক্ষ্মীপুর মুন্সিপাড়া কওমি মাদ্রাসায়</h2>
+                    <div class="divider">
+                        <span></span>
+                        <i class="fas fa-mosque"></i>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="welcome-content">
+                    <div class="welcome-image">
+                        <img src="images/madrasa-building.jpg" alt="মাদ্রাসা ভবন">
+                    </div>
+                    <div class="welcome-text">
+                        <p>আসসালামু আলাইকুম ওয়া রাহমাতুল্লাহ। লক্ষ্মীপুর মুন্সিপাড়া কওমি মাদ্রাসায় আপনাকে স্বাগতম। ১৯৯৫ সালে প্রতিষ্ঠিত আমাদের প্রতিষ্ঠানটি ইসলামী ও আধুনিক শিক্ষার সমন্বয়ে ছাত্রদের পূর্ণাঙ্গ মানুষ হিসাবে গড়ে তোলার লক্ষ্যে নিরলস কাজ করে যাচ্ছে।</p>
+                        
+                        <p>আমাদের মাদ্রাসায় হিফজ, নূরানী, ইবতেদায়ী, দাখিল ও আলিম পর্যায়ে শিক্ষাদান করা হয়। যোগ্য ও অভিজ্ঞ শিক্ষকমণ্ডলীর তত্ত্বাবধানে আমাদের ছাত্ররা মানসম্মত ইসলামী শিক্ষায় শিক্ষিত হচ্ছে।</p>
+                        
+                        <a href="about.html" class="btn">আরো জানুন</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ফিচার সেকশন -->
+        <section class="features-section">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>যোগ্য শিক্ষক</h3>
+                        <p>অভিজ্ঞ ও যোগ্য শিক্ষকমণ্ডলী দ্বারা পাঠদান</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mosque"></i>
+                        </div>
+                        <h3>মসজিদ সুবিধা</h3>
+                        <p>নিজস্ব মসজিদে নিয়মিত জামাতে নামাজ</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>আধুনিক লাইব্রেরি</h3>
+                        <p>সমৃদ্ধ লাইব্রেরি ও পাঠকক্ষ</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>কম্পিউটার ল্যাব</h3>
+                        <p>কম্পিউটার শিক্ষার সুব্যবস্থা</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- নোটিশ সেকশন -->
+        <section class="notice-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>সাম্প্রতিক নোটিশ</h2>
+                    <div class="divider">
+                        <span></span>
+                        <i class="fas fa-bullhorn"></i>
+                        <span></span>
+                    </div>
+                </div>
+                
+                <div class="notice-wrapper">
+                    <div class="notice-list">
+                        <div class="notice-item">
+                            <div class="notice-date">
+                                <span class="day">১৫</span>
+                                <span class="month">এপ্রিল</span>
+                                <span class="year">২০২৫</span>
+                            </div>
+                            <div class="notice-content">
+                                <h3>ভর্তি পরীক্ষার ফলাফল প্রকাশ</h3>
+                                <p>২০২৫-২০২৬ শিক্ষাবর্ষের ভর্তি পরীক্ষার ফলাফল প্রকাশ করা হয়েছে। ফলাফল জানতে...</p>
+                                <a href="#" class="read-more">বিস্তারিত</a>
+                            </div>
+                        </div>
+                        
+                        <div class="notice-item">
+                            <div class="notice-date">
+                                <span class="day">১০</span>
+                                <span class="month">এপ্রিল</span>
+                                <span class="year">২০২৫</span>
+                            </div>
+                            <div class="notice-content">
+                                <h3>বার্ষিক পরীক্ষার রুটিন প্রকাশ</h3>
+                                <p>বার্ষিক পরীক্ষার রুটিন প্রকাশ করা হয়েছে। সকল ছাত্রদের যথাসময়ে প্রস্তুতি নিতে...</p>
+                                <a href="#" class="read-more">বিস্তারিত</a>
+                            </div>
+                        </div>
+                        
+                        <div class="notice-item">
+                            <div class="notice-date">
+                                <span class="day">০৫</span>
+                                <span class="month">এপ্রিল</span>
+                                <span class="year">২০২৫</span>
+                            </div>
+                            <div class="notice-content">
+                                <h3>মাসিক পরীক্ষার সময়সূচি</h3>
+                                <p>আগামী সপ্তাহে অনুষ্ঠিতব্য মাসিক পরীক্ষার সময়সূচি প্রকাশ করা হয়েছে...</p>
+                                <a href="#" class="read-more">বিস্তারিত</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="all-notices">
+                        <a href="notice.html" class="btn">সকল নোটিশ দেখুন</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- কুইক লিংক ও স্ট্যাটস -->
+        <section class="quick-links-stats">
+            <div class="container">
+                <div class="quick-links-stats-grid">
+                    <div class="quick-links">
+                        <h3>দ্রুত লিংক</h3>
+                        <ul>
+                            <li><a href="admission-form.html"><i class="fas fa-file-alt"></i> ভর্তি ফরম</a></li>
+                            <li><a href="teachers.html"><i class="fas fa-chalkboard-teacher"></i> শিক্ষক তালিকা</a></li>
+                            <li><a href="committee.html"><i class="fas fa-users"></i> ম্যানেজিং কমিটি</a></li>
+                            <li><a href="results.html"><i class="fas fa-poll"></i> ফলাফল</a></li>
+                            <li><a href="gallery.html"><i class="fas fa-images"></i> ছবি গ্যালারি</a></li>
+                            <li><a href="contact.html"><i class="fas fa-envelope"></i> যোগাযোগ করুন</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="stats">
+                        <h3>আমাদের অর্জন</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                </div>
+                                <div class="stat-number">৫০০+</div>
+                                <div class="stat-text">ছাত্র</div>
+                            </div>
+                            
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                </div>
+                                <div class="stat-number">৩০+</div>
+                                <div class="stat-text">শিক্ষক</div>
+                            </div>
+                            
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="stat-number">২৫+</div>
+                                <div class="stat-text">বছরের অভিজ্ঞতা</div>
+                            </div>
+                            
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="stat-number">১০+</div>
+                                <div class="stat-text">কোর্স</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- গ্যালারি সেকশন -->
+        <section class="gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>ছবি গ্যালারি</h2>
+                    <div class="divider">
+                        <span></span>
+                        <i class="fas fa-images"></i>
+                        <span></span>
+                    </div>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/gallery1.jpg" alt="গ্যালারি ছবি">
+                        <div class="gallery-overlay">
+                            <h3>বার্ষিক মিলাদ মাহফিল</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="images/gallery2.jpg" alt="গ্যালারি ছবি">
+                        <div class="gallery-overlay">
+                            <h3>ক্লাসরুম কার্যক্রম</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="images/gallery3.jpg" alt="গ্যালারি ছবি">
+                        <div class="gallery-overlay">
+                            <h3>বার্ষিক ক্রীড়া প্রতিযোগিতা</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="images/gallery4.jpg" alt="গ্যালারি ছবি">
+                        <div class="gallery-overlay">
+                            <h3>ক্যাম্পাস</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="more-gallery">
+                    <a href="gallery.html" class="btn">আরো ছবি দেখুন</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- যোগাযোগ সেকশন -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <h3>যোগাযোগ করুন</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="আপনার নাম" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="ইমেইল" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="tel" id="phone" placeholder="মোবাইল নম্বর" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea id="message" placeholder="আপনার মেসেজ" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn">পাঠিয়ে দিন</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info-container">
+                        <h3>যোগাযোগের ঠিকানা</h3>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>ঠিকানা</h4>
+                                <p>মুন্সিপাড়া, লক্ষ্মীপুর সদর, লক্ষ্মীপুর</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>ফোন</h4>
+                                <p>০১৭১২-৩৪৫৬৭৮, ০১৮১৭-৯৮৭৬৫৪</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>ইমেইল</h4>
+                                <p>info@lmkm.edu.bd</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ম্যাপ সেকশন -->
+        <section class="map-section">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.5272959563116!2d90.83721731498315!3d22.868095885034188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3754af712aaac0b7%3A0x4bab3fb29148dbab!2sNoakhali%2C%20Bangladesh!5e0!3m2!1sen!2sus!4v1628089877446!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-about">
+                        <img src="images/logo.png" alt="মাদ্রাসা লোগো">
+                        <h3>লক্ষ্মীপুর মুন্সিপাড়া কওমি মাদ্রাসা</h3>
+                        <p>১৯৯৫ সাল থেকে ইসলামী শিক্ষা প্রদানে নিবেদিত। আমাদের লক্ষ্য হল উচ্চ মানের ইসলামী শিক্ষার মাধ্যমে দেশ ও জাতির জন্য যোগ্য নাগরিক তৈরি করা।</p>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h3>গুরুত্বপূর্ণ লিংক</h3>
+                        <ul>
+                            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="admission-form.html">ভর্তি ফরম</a></li>
+                            <li><a href="teachers.html">শিক্ষক তালিকা</a></li>
+                            <li><a href="committee.html">ম্যানেজিং কমিটি</a></li>
+                            <li><a href="results.html">ফলাফল</a></li>
+                            <li><a href="notice.html">নোটিশ বোর্ড</a></li>
+                            <li><a href="contact.html">যোগাযোগ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h3>যোগাযোগ করুন</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> মুন্সিপাড়া, লক্ষ্মীপুর সদর, লক্ষ্মীপুর</p>
+                        <p><i class="fas fa-phone-alt"></i> ০১৭১২-৩৪৫৬৭৮, ০১৮১৭-৯৮৭৬৫৪</p>
+                        <p><i class="fas fa-envelope"></i> info@lmkm.edu.bd</p>
+                        
+                        <div class="footer-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    <p>&copy; ২০২৫ লক্ষ্মীপুর মুন্সিপাড়া কওমি মাদ্রাসা। সর্বস্বত্ব সংরক্ষিত।</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- স্ক্রল টু টপ বাটন -->
+    <a href="#" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
