@@ -2,25 +2,38 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>অনলাইন পেমেন্ট ফর্ম</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>সর্দার পাড়া জামে মসজিদ</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h2>অনলাইন পেমেন্ট</h2>
-    <form id="paymentForm">
+    <h1>সর্দার পাড়া জামে মসজিদ</h1>
+    <p>মসজিদের জন্য আপনার খুশিমতো দান করুন</p>
+
+    <form id="donationForm">
       <label for="name">আপনার নাম:</label>
       <input type="text" id="name" required>
 
-      <label for="phone">মোবাইল নম্বর:</label>
-      <input type="tel" id="phone" required>
-
-      <label for="amount">টাকার পরিমাণ:</label>
+      <label for="amount">পরিমাণ (৳):</label>
       <input type="number" id="amount" required>
 
-      <button type="submit">পেমেন্ট করুন</button>
+      <label for="method">পেমেন্ট পদ্ধতি:</label>
+      <select id="method" required>
+        <option value="">-- সিলেক্ট করুন --</option>
+        <option value="bkash">বিকাশ</option>
+        <option value="nagad">নগদ</option>
+        <option value="rocket">রকেট</option>
+      </select>
+
+      <button type="submit">দান করুন</button>
     </form>
+
+    <div class="payment-info" id="paymentInfo" style="display: none;">
+      <h3>পেমেন্ট করুন নিচের নম্বরে:</h3>
+      <p id="number"></p>
+      <p>পেমেন্ট করার পর মসজিদের ইমাম সাহেবকে জানাতে ভুলবেন না।</p>
+    </div>
   </div>
 
   <script src="script.js"></script>
