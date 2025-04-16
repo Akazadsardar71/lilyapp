@@ -1,36 +1,61 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>মাদ্রাসা অ্যাপ</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>মাদ্রাসা দারুল উলুম</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Hind Siliguri', sans-serif;
+      background-image: url('https://i.ibb.co/Tk8r5kx/madrasa-bg.jpg'); /* ব্যাকগ্রাউন্ড ছবি */
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+    }
+    header {
+      background-color: rgba(0, 60, 90, 0.8);
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      height: 80px;
+    }
+    h1 {
+      margin: 10px 0 0;
+      font-size: 2rem;
+    }
+    .content {
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 20px;
+      border-radius: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #1abc9c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #16a085;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="মাদ্রাসার লোগো" class="logo">
-        <h1>মাদ্রাসা অ্যাপ</h1>
-    </header>
-
-    <nav>
-        <a href="#">হোম</a>
-        <a href="#">কোর্সসমূহ</a>
-        <a href="#">শিক্ষকবৃন্দ</a>
-        <a href="#">যোগাযোগ</a>
-    </nav>
-
-    <section class="content">
-        <img src="background.jpg" alt="মাদ্রাসার ছবি" class="background">
-        <div class="text">
-            <h2>স্বাগতম</h2>
-            <p>আমাদের মাদ্রাসায় আপনাকে স্বাগতম। এখানে আপনি ইসলামী শিক্ষা ও জ্ঞান অর্জন করতে পারবেন।</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 মাদ্রাসা অ্যাপ। সর্বস্বত্ব সংরক্ষিত।</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <header>
+    <img src="https://i.ibb.co/PM0bjvY/madrasa-logo.png" alt="Madrasah Logo">
+    <h1>মাদ্রাসা দারুল উলুম</h1>
+    <p>ইসলামী শিক্ষার একটি আধুনিক প্ল্যাটফর্ম</p>
+  </header>
+  <div class="content">
+    <h2>স্বাগতম!</h2>
+    <p>এই অ্যাপে আপনি ভর্তি ফর্ম পূরণ, চাঁদা প্রদানের তথ্য, শিক্ষক তালিকা ও আরও অনেক কিছু জানতে পারবেন।</p>
+    <button onclick="alert('শিগগিরই আসছে!')">ভর্তি ফর্ম দেখুন</button>
+  </div>
 </body>
 </html>
