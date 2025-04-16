@@ -56,6 +56,31 @@
     <h2>স্বাগতম!</h2>
     <p>এই অ্যাপে আপনি ভর্তি ফর্ম পূরণ, চাঁদা প্রদানের তথ্য, শিক্ষক তালিকা ও আরও অনেক কিছু জানতে পারবেন।</p>
     <button onclick="alert('শিগগিরই আসছে!')">ভর্তি ফর্ম দেখুন</button>
-  </div>
+  </div> class="content">
+  <h2>ভর্তি ফর্ম</h2>
+  <form onsubmit="submitForm(event)">
+    <label>নাম:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>পিতার নাম:</label><br>
+    <input type="text" name="father" required><br><br>
+
+    <label>মোবাইল নম্বর:</label><br>
+    <input type="tel" name="mobile" required><br><br>
+
+    <label>ঠিকানা:</label><br>
+    <textarea name="address" rows="3" required></textarea><br><br>
+
+    <label>শ্রেণি:</label><br>
+    <select name="class" required>
+      <option value="">-- একটি নির্বাচন করুন --</option>
+      <option value="নুরানি">নুরানি</option>
+      <option value="হিফজ">হিফজ</option>
+      <option value="দাখিল">দাখিল</option>
+    </select><br><br>
+
+    <button type="submit">ফর্ম জমা দিন</button>
+  </form>
+</div>
 </body>
 </html>
