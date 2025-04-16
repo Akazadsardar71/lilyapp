@@ -1,10 +1,10 @@
  /* বেসিক সেটআপ */
 :root {
-    --primary-color: #005e54;
-    --secondary-color: #00796b;
-    --accent-color: #ff5722;
-    --text-color: #333333;
-    --light-color: #f5f5f5;
+    --primary-color:#00695c;
+    --secondary-color: #009688;
+    --accent-color:#ff7043;
+    --text-color: #2e2e2e;
+    --light-color:#fafafa;
     --white: #ffffff;
     --dark-gray: #4a4a4a;
     --border-color: #e0e0e0;
