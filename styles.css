@@ -18,8 +18,8 @@
 
 body {
     font-family: 'Hind Siliguri', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 18px;
+    line-height: 1.9;
     color: var(--text-color);
     background-color: var(--light-color);
 }
@@ -327,7 +327,7 @@ img {
 
 /* ওয়েলকাম সেকশন */
 .welcome-section {
-    padding: 80px 0;
+    padding: 85px 0;
     background-color: var(--white);
 }
 
