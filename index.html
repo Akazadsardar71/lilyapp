@@ -1,69 +1,49 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>সর্দার পাড়া জামে মসজিদ - দান সংগ্রহ</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>সর্দার পাড়া জামে মসজিদ – দান করুন</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>সর্দার পাড়া জামে মসজিদ</h1>
-        <p>মহান আল্লাহর ঘর নির্মাণ ও রক্ষণাবেক্ষণে আপনার উদার সহযোগিতা একান্ত কাম্য।</p>
-    </header>
+  <div class="container">
+    <h1>🕌 সর্দার পাড়া জামে মসজিদ</h1>
+    <p>আপনার সদয় দানের মাধ্যমে আমাদের মসজিদের উন্নয়নে সাহায্য করুন।</p>
 
-    <section class="donation-info">
-        <h2>দান করুন</h2>
-        <p>আপনার সাধ্য অনুযায়ী দান করে মসজিদের উন্নয়নে অংশ নিন।</p>
-        <div class="payment-methods">
-            <div>
-                <h3>বিকাশ মার্চেন্ট</h3>
-                <p>মার্চেন্ট নম্বর: <strong>01713928024</strong></p>
-                <p>বিকাশ অ্যাপ থেকে অথবা *247# ডায়াল করে পেমেন্ট করুন।</p>
-            </div>
-            <div>
-                <h3>নগদ সেনমানি</h3>
-                <p>নগদ নম্বর: <strong>01645422463</strong></p>
-                <p>নগদ অ্যাপ থেকে অথবা *167# ডায়াল করে সেনমানি করুন।</p>
-            </div>
-        </div>
+    <form id="donationForm">
+      <label>আপনার নাম:</label>
+      <input type="text" id="name" required>
 
-        <h3>পেমেন্ট সম্পন্ন হওয়ার পরে তথ্য জমা দিন</h3>
-        <form id="donationForm">
-            <div>
-                <label for="name">নাম:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-                <label for="mobile">মোবাইল নম্বর:</label>
-                <input type="tel" id="mobile" name="mobile" required>
-            </div>
-            <div>
-                <label for="paymentMethod">পেমেন্টের মাধ্যম:</label>
-                <select id="paymentMethod" name="paymentMethod">
-                    <option value="bKash">বিকাশ</option>
-                    <option value="Nagad">নগদ</option>
-                    <option value="Other">অন্যান্য</option>
-                </select>
-            </div>
-            <div>
-                <label for="transactionId">ট্রানজেকশন আইডি:</label>
-                <input type="text" id="transactionId" name="transactionId" required>
-            </div>
-            <div>
-                <label for="amount">দানের পরিমাণ:</label>
-                <input type="number" id="amount" name="amount" required>
-            </div>
-            <button type="submit">তথ্য জমা দিন</button>
-        </form>
+      <label>মোবাইল নম্বর:</label>
+      <input type="tel" id="phone" required>
 
-        <p class="important">দান করার পরে অনুগ্রহ করে উপরের ফর্মটি পূরণ করে আপনার তথ্য জমা দিন।</p>
-    </section>
+      <label>দান এর পরিমাণ (৳):</label>
+      <input type="number" id="amount" required>
 
-    <footer>
-        <p>&copy; ২০২3 সর্দার পাড়া জামে মসজিদ। সর্বস্বত্ব সংরক্ষিত।</p>
-    </footer>
+      <label>দান পদ্ধতি:</label>
+      <select id="method" required>
+        <option value="bkash">বিকাশ</option>
+        <option value="nagad">নগদ</option>
+        <option value="cash">ক্যাশ</option>
+      </select>
 
-    <script src="script.js"></script>
+      <button type="submit">দান করুন</button>
+    </form>
+
+    <h2>📋 দানের তালিকা</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>নাম</th>
+          <th>ফোন</th>
+          <th>পরিমাণ</th>
+          <th>পদ্ধতি</th>
+        </tr>
+      </thead>
+      <tbody id="donationTable"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
