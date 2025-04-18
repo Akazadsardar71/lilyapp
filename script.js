@@ -1,35 +1,39 @@
-import { getDatabase, ref, push } from "firebase/database";
+const form = document.getElementById('donationForm');
+const table = document.getElementById('donationTable');
 
-const donationForm = document.getElementById('donationForm');
+let donations = JSON.parse(localStorage.getItem('masjidDonations')) || [];
 
-donationForm.addEventListener('submit', (event) => {
-    event.preventDefault();
+function saveDonations() {
+  localStorage.setItem('masjidDonations', JSON.stringify(donations));
+}
 
-    const name = document.getElementById('name').value;
-    const mobile = document.getElementById('mobile').value;
-    const paymentMethod = document.getElementById('paymentMethod').value;
-    const transactionId = document.getElementById('transactionId').value;
-    const amount = document.getElementById('amount').value;
+function renderDonations() {
+  table.innerHTML = '';
+  donations.forEach(d => {
+    const row = table.insertRow();
+    row.innerHTML = `
+      <td>${d.name}</td>
+      <td>${d.phone}</td>
+      <td>৳${d.amount}</td>
+      <td>${d.method}</td>
+    `;
+  });
+}
 
-    const database = getDatabase();
-    const donationsRef = ref(database, 'donations');
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
 
-    const newDonation = {
-        name: name,
-        mobile: mobile,
-        paymentMethod: paymentMethod,
-        transactionId: transactionId,
-        amount: amount,
-        timestamp: new Date().toISOString()
-    };
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const amount = parseFloat(document.getElementById('amount').value);
+  const method = document.getElementById('method').value;
 
-    push(donationsRef, newDonation)
-        .then(() => {
-            alert('আপনার দান সফলভাবে জমা হয়েছে।');
-            donationForm.reset();
-        })
-        .catch((error) => {
-            console.error("Error saving donation:", error);
-            alert('দান তথ্য জমা দিতে সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।');
-        });
+  const donation = { name, phone, amount, method };
+  donations.push(donation);
+  saveDonations();
+  renderDonations();
+  form.reset();
 });
+
+// Initial render
+renderDonations();
