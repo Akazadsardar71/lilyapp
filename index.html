@@ -3,564 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lily App - আপনার জীবনযাপনের ডিজিটাল সহযোগী</title>
-    <meta name="description" content="Lily App - আপনার দৈনন্দিন জীবনযাপনকে সহজ ও সুসংগঠিত করার ডিজিটাল সমাধান।">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.png" type="image/png">
+    <title>সর্দার পাড়া জামে মসজিদ - দান সংগ্রহ</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="container">
-            <div class="header-wrapper">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="images/logo.png" alt="Lily App Logo">
-                        <span>Lily App</span>
-                    </a>
-                </div>
-                
-                <nav class="nav">
-                    <ul class="nav-menu">
-                        <li><a href="#home" class="active">হোম</a></li>
-                        <li><a href="#features">ফিচারস</a></li>
-                        <li><a href="#how-it-works">কিভাবে ব্যবহার করবেন</a></li>
-                        <li><a href="#testimonials">ব্যবহারকারীদের মতামত</a></li>
-                        <li><a href="#faq">প্রশ্নোত্তর</a></li>
-                        <li><a href="#contact">যোগাযোগ</a></li>
-                    </ul>
-                    
-                    <div class="nav-buttons">
-                        <a href="#download" class="btn btn-primary">ডাউনলোড করুন</a>
-                    </div>
-                    
-                    <div class="mobile-menu-toggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </nav>
-            </div>
-        </div>
+    <header>
+        <h1>সর্দার পাড়া জামে মসজিদ</h1>
+        <p>মহান আল্লাহর ঘর নির্মাণ ও রক্ষণাবেক্ষণে আপনার উদার সহযোগিতা একান্ত কাম্য।</p>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <h1>আপনার দৈনন্দিন জীবনযাপনের ডিজিটাল সহযোগী</h1>
-                <p>Lily App এর সাহায্যে আপনার দৈনন্দিন কাজগুলো আরও সহজ ও সুসংগঠিত করুন। টাস্ক ম্যানেজমেন্ট, রিমাইন্ডার, নোট, ক্যালেন্ডার - সবকিছু এক অ্যাপে।</p>
-                
-                <div class="hero-buttons">
-                    <a href="#download" class="btn btn-primary btn-large">
-                        <i class="fab fa-google-play"></i>
-                        Google Play
-                    </a>
-                    <a href="#download" class="btn btn-secondary btn-large">
-                        <i class="fab fa-apple"></i>
-                        App Store
-                    </a>
-                </div>
-                
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="number">১০০K+</span>
-                        <span class="text">ডাউনলোড</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="number">৪.৮</span>
-                        <span class="text">রেটিং</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="number">৮০K+</span>
-                        <span class="text">অ্যাক্টিভ ইউজার</span>
-                    </div>
-                </div>
+    <section class="donation-info">
+        <h2>দান করুন</h2>
+        <p>আপনার সাধ্য অনুযায়ী দান করে মসজিদের উন্নয়নে অংশ নিন।</p>
+        <div class="payment-methods">
+            <div>
+                <h3>বিকাশ মার্চেন্ট</h3>
+                <p>মার্চেন্ট নম্বর: <strong>01713928024</strong></p>
+                <p>বিকাশ অ্যাপ থেকে অথবা *247# ডায়াল করে পেমেন্ট করুন।</p>
             </div>
-            
-            <div class="hero-image">
-                <img src="images/app-mockup.png" alt="Lily App Preview">
-                <div class="hero-badge">
-                    <span>নিউ</span>
-                    <h3>ভার্সন ৩.০</h3>
-                    <p>এখন আরও বেশি ফিচার সহ</p>
-                </div>
+            <div>
+                <h3>নগদ সেনমানি</h3>
+                <p>নগদ নম্বর: <strong>01645422463</strong></p>
+                <p>নগদ অ্যাপ থেকে অথবা *167# ডায়াল করে সেনমানি করুন।</p>
             </div>
         </div>
-        
-        <div class="hero-wave">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,117.3C96,139,192,181,288,197.3C384,213,480,203,576,176C672,149,768,107,864,96C960,85,1056,107,1152,117.3C1248,128,1344,128,1392,128L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-            </svg>
-        </div>
+
+        <h3>পেমেন্ট সম্পন্ন হওয়ার পরে তথ্য জমা দিন</h3>
+        <form id="donationForm">
+            <div>
+                <label for="name">নাম:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="mobile">মোবাইল নম্বর:</label>
+                <input type="tel" id="mobile" name="mobile" required>
+            </div>
+            <div>
+                <label for="paymentMethod">পেমেন্টের মাধ্যম:</label>
+                <select id="paymentMethod" name="paymentMethod">
+                    <option value="bKash">বিকাশ</option>
+                    <option value="Nagad">নগদ</option>
+                    <option value="Other">অন্যান্য</option>
+                </select>
+            </div>
+            <div>
+                <label for="transactionId">ট্রানজেকশন আইডি:</label>
+                <input type="text" id="transactionId" name="transactionId" required>
+            </div>
+            <div>
+                <label for="amount">দানের পরিমাণ:</label>
+                <input type="number" id="amount" name="amount" required>
+            </div>
+            <button type="submit">তথ্য জমা দিন</button>
+        </form>
+
+        <p class="important">দান করার পরে অনুগ্রহ করে উপরের ফর্মটি পূরণ করে আপনার তথ্য জমা দিন।</p>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>আমাদের মূল ফিচারসমূহ</h2>
-                <p>Lily App আপনার জীবনযাপনকে সহজ করার জন্য অনেকগুলি দরকারি ফিচার নিয়ে এসেছে</p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <h3>টাস্ক ম্যানেজমেন্ট</h3>
-                    <p>আপনার দৈনন্দিন কাজের তালিকা তৈরি করুন, প্রায়োরিটি সেট করুন এবং সময়মত সম্পন্ন করুন</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bell"></i>
-                    </div>
-                    <h3>স্মার্ট রিমাইন্ডার</h3>
-                    <p>গুরুত্বপূর্ণ কাজের জন্য নোটিফিকেশন সেট করে কখনো কোন কাজ মিস করবেন না</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3>ক্যালেন্ডার ইন্টিগ্রেশন</h3>
-                    <p>আপনার সাপ্তাহিক এবং মাসিক সময়সূচী একত্রে দেখুন, মিটিং এবং ইভেন্ট ম্যানেজ করুন</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-sticky-note"></i>
-                    </div>
-                    <h3>নোট ও ডায়েরি</h3>
-                    <p>ভাবনা, আইডিয়া ও গুরুত্বপূর্ণ তথ্য দ্রুত লিখে রাখুন এবং যেকোনো সময় অ্যাক্সেস করুন</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>প্রোডাক্টিভিটি ট্র্যাকিং</h3>
-                    <p>আপনার উৎপাদনশীলতা পর্যবেক্ষণ করুন এবং দৈনিক, সাপ্তাহিক ও মাসিক রিপোর্ট দেখুন</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-moon"></i>
-                    </div>
-                    <h3>ডার্ক মোড</h3>
-                    <p>চোখের উপর চাপ কমাতে দিনে বা রাতে যেকোনো সময় ডার্ক মোড ব্যবহার করুন</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- App Screenshots Section -->
-    <section class="screenshots-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Lily App এর স্ক্রিনশট</h2>
-                <p>এক নজরে দেখে নিন Lily App এর অসাধারণ ইউজার ইন্টারফেস</p>
-            </div>
-            
-            <div class="screenshots-slider">
-                <div class="screenshot-item">
-                    <img src="images/screenshot1.jpg" alt="Lily App Screenshot">
-                </div>
-                <div class="screenshot-item">
-                    <img src="images/screenshot2.jpg" alt="Lily App Screenshot">
-                </div>
-                <div class="screenshot-item">
-                    <img src="images/screenshot3.jpg" alt="Lily App Screenshot">
-                </div>
-                <div class="screenshot-item">
-                    <img src="images/screenshot4.jpg" alt="Lily App Screenshot">
-                </div>
-                <div class="screenshot-item">
-                    <img src="images/screenshot5.jpg" alt="Lily App Screenshot">
-                </div>
-            </div>
-            
-            <div class="screenshot-controls">
-                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
-                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-works-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>কিভাবে Lily App ব্যবহার করবেন</h2>
-                <p>সহজ ৩ ধাপে শুরু করুন আপনার উৎপাদনশীল জীবনযাপন</p>
-            </div>
-            
-            <div class="steps">
-                <div class="step-item">
-                    <div class="step-number">১</div>
-                    <div class="step-content">
-                        <h3>অ্যাপ ডাউনলোড করুন</h3>
-                        <p>Google Play বা App Store থেকে Lily App ডাউনলোড করুন এবং আপনার অ্যাকাউন্ট তৈরি করুন</p>
-                    </div>
-                    <div class="step-image">
-                        <img src="images/step1.png" alt="Download App">
-                    </div>
-                </div>
-                
-                <div class="step-item reverse">
-                    <div class="step-number">২</div>
-                    <div class="step-content">
-                        <h3>আপনার লক্ষ্য সেট করুন</h3>
-                        <p>আপনার দৈনিক কাজের তালিকা তৈরি করুন, অগ্রাধিকার বেছে নিন এবং টাইমলাইন সেট করুন</p>
-                    </div>
-                    <div class="step-image">
-                        <img src="images/step2.png" alt="Set Goals">
-                    </div>
-                </div>
-                
-                <div class="step-item">
-                    <div class="step-number">৩</div>
-                    <div class="step-content">
-                        <h3>প্রগতি ট্র্যাক করুন</h3>
-                        <p>আপনার কাজের অগ্রগতি পর্যবেক্ষণ করুন, সম্পন্ন করা কাজগুলো দেখুন এবং প্রোডাক্টিভিটি বাড়ান</p>
-                    </div>
-                    <div class="step-image">
-                        <img src="images/step3.png" alt="Track Progress">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>ব্যবহারকারীদের মতামত</h2>
-                <p>দেখুন Lily App সম্পর্কে আমাদের ব্যবহারকারীরা কী বলছেন</p>
-            </div>
-            
-            <div class="testimonials-slider">
-                <div class="testimonial-item">
-                    <div class="testimonial-content">
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"Lily App আমার জীবনযাপনকে সম্পূর্ণভাবে পরিবর্তন করে দিয়েছে। আগে আমি সবসময় কাজ ভুলে যেতাম, কিন্তু এখন সব কিছু সময়মত শেষ করতে পারি। অসাধারণ অ্যাপ!"</p>
-                        <div class="testimonial-author">
-                            <img src="images/user1.jpg" alt="User Avatar">
-                            <div class="author-info">
-                                <h4>সাবরিনা আক্তার</h4>
-                                <p>মার্কেটিং ম্যানেজার</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-item">
-                    <div class="testimonial-content">
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"ক্লিন ইন্টারফেস, ইন্টুইটিভ ফিচার আর ব্যবহারকারী বান্ধব ডিজাইন - এই তিনটি জিনিসই Lily App কে অন্যান্য প্রোডাক্টিভিটি অ্যাপ থেকে আলাদা করেছে। আমি সবাইকে এই অ্যাপ ব্যবহার করার পরামর্শ দিই।"</p>
-                        <div class="testimonial-author">
-                            <img src="images/user2.jpg" alt="User Avatar">
-                            <div class="author-info">
-                                <h4>রাকিব হাসান</h4>
-                                <p>সফটওয়্যার ইঞ্জিনিয়ার</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-item">
-                    <div class="testimonial-content">
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <p>"একজন স্টুডেন্ট হিসেবে, Lily App আমাকে পড়াশোনার সময় ম্যানেজ করতে অনেক সাহায্য করেছে। এসাইনমেন্ট, ক্লাস রুটিন, এক্সাম - সবকিছু এক জায়গায় ম্যানেজ করতে পারি। বাংলা ভাষা সাপোর্ট থাকায় ব্যবহার করা আরও সহজ হয়েছে।"</p>
-                        <div class="testimonial-author">
-                            <img src="images/user3.jpg" alt="User Avatar">
-                            <div class="author-info">
-                                <h4>তাসনীম জাহান</h4>
-                                <p>ছাত্রী</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-controls">
-                <div class="testimonial-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Download Section -->
-    <section id="download" class="download-section">
-        <div class="container">
-            <div class="download-content">
-                <h2>আজই ডাউনলোড করুন Lily App</h2>
-                <p>Android এবং iOS উভয় প্ল্যাটফর্মে বিনামূল্যে ডাউনলোড করুন এবং আপনার জীবনকে আরও সুসংগঠিত করুন।</p>
-                
-                <div class="download-buttons">
-                    <a href="#" class="download-btn">
-                        <img src="images/google-play-badge.png" alt="Google Play">
-                    </a>
-                    <a href="#" class="download-btn">
-                        <img src="images/app-store-badge.png" alt="App Store">
-                    </a>
-                </div>
-            </div>
-            
-            <div class="download-image">
-                <img src="images/devices.png" alt="Lily App on Devices">
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="faq-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>প্রায়শই জিজ্ঞাসিত প্রশ্ন</h2>
-                <p>Lily App সম্পর্কে সাধারণ প্রশ্নের উত্তর জেনে নিন</p>
-            </div>
-            
-            <div class="faq-wrapper">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Lily App কি বিনামূল্যে ব্যবহার করা যায়?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>হ্যাঁ, Lily App এর বেসিক ভার্সন সম্পূর্ণ বিনামূল্যে ব্যবহার করা যায়। তবে অতিরিক্ত প্রিমিয়াম ফিচার ব্যবহার করতে চাইলে আপনি সাবস্ক্রিপশন কিনতে পারেন।</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>আমি কি Lily App এ আমার ডাটা সিঙ্ক করতে পারব?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>হ্যাঁ, আপনি একাধিক ডিভাইসে Lily App ব্যবহার করতে পারেন। আপনার তথ্য ক্লাউডে সিঙ্ক হবে এবং যেকোনো ডিভাইস থেকে অ্যাক্সেস করতে পারবেন। শুধু একই অ্যাকাউন্ট দিয়ে লগইন করুন।</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Lily App কি অফলাইনে ব্যবহার করা যায়?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>হ্যাঁ, Lily App অফলাইনেও ব্যবহার করা যায়। আপনি ইন্টারনেট কানেকশন ছাড়াও আপনার টাস্ক এবং নোট অ্যাক্সেস করতে পারবেন। যখন আবার ইন্টারনেট কানেকশন পাবেন, তখন আপনার ডাটা আপনা-আপনি সিঙ্ক হয়ে যাবে।</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Lily App এর প্রিমিয়াম প্ল্যানে কী কী ফিচার পাওয়া যায়?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>প্রিমিয়াম প্ল্যানে আপনি অতিরিক্ত ফিচার পাবেন যেমন: আনলিমিটেড টাস্ক, অ্যাডভান্সড রিপোর্টিং, প্রিমিয়াম থিম, ফাইল অ্যাটাচমেন্ট, ব্যাকআপ এবং রিস্টোর, বিজ্ঞাপন মুক্ত অভিজ্ঞতা এবং প্রায়োরিটি কাস্টমার সাপোর্ট।</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>আমি কিভাবে Lily App থেকে আমার ডাটা এক্সপোর্ট করতে পারি?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Lily App এর সেটিংস মেনুতে গিয়ে "Data Export" অপশন সিলেক্ট করুন। সেখানে আপনি আপনার পছন্দমত ফরম্যাটে (CSV, PDF, বা JSON) ডাটা এক্সপোর্ট করতে পারবেন।</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>আমাদের সাথে যোগাযোগ করুন</h2>
-                <p>আপনার মতামত, প্রশ্ন বা সাজেশন জানাতে আমাদের সাথে যোগাযোগ করুন</p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-details">
-                            <h3>ইমেইল</h3>
-                            <p>support@lilyapp.com</p>
-                            <p>info@lilyapp.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="info-details">
-                            <h3>ফোন</h3>
-                            <p>+৮৮০ ১৭১২-৩৪৫৬৭৮</p>
-                            <p>+৮৮০ ১৮১২-৯৮৭৬৫৪</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-details">
-                            <h3>ঠিকানা</h3>
-                            <p>৩৬/৭, গুলশান এভিনিউ</p>
-                            <p>ঢাকা-১২১২, বাংলাদেশ</p>
-                        </div>
-                    </div>
-                    
-                    <div class="social-media">
-                        <h3>সোশ্যাল মিডিয়া</h3>
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" placeholder="আপনার নাম" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="ইমেইল ঠিকানা" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="text" id="subject" placeholder="বিষয়" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea id="message" placeholder="আপনার মেসেজ" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">মেসেজ পাঠান</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="images/logo.png" alt="Lily App Logo">
-                    <h3>Lily App</h3>
-                    <p>আপনার দৈনন্দিন জীবনযাপনের ডিজিটাল সহযোগী</p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-links-column">
-                        <h4>কুইক লিংক</h4>
-                        <ul>
-                            <li><a href="#home">হোম</a></li>
-                            <li><a href="#features">ফিচারস</a></li>
-                            <li><a href="#how-it-works">কিভাবে ব্যবহার করবেন</a></li>
-                            <li><a href="#testimonials">ব্যবহারকারীদের মতামত</a></li>
-                            <li><a href="#faq">প্রশ্নোত্তর</a></li>
-                            <li><a href="#contact">যোগাযোগ</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-links-column">
-                        <h4>সাপোর্ট</h4>
-                        <ul>
-                            <li><a href="#">হেল্প সেন্টার</a></li>
-                            <li><a href="#">প্রাইভেসি পলিসি</a></li>
-                            <li><a href="#">টার্মস অফ সার্ভিস</a></li>
-                            <li><a href="#">ফিডব্যাক</a></li>
-                            <li><a href="#">রিপোর্ট বাগ</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-links-column">
-                        <h4>কোম্পানি</h4>
-                        <ul>
-                            <li><a href="#">আমাদের সম্পর্কে</a></li>
-                            <li><a href="#">ব্লগ</a></li>
-                            <li><a href="#">কেরিয়ার</a></li>
-                            <li><a href="#">মিডিয়া কিট</a></li>
-                            <li><a href="#">কন্টাক্ট</a></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="footer-newsletter">
-                    <h4>আমাদের নিউজলেটার সাবস্ক্রাইব করুন</h4>
-                    <p>নতুন আপডেট, ফিচার এবং অফার সম্পর্কে জানতে নিউজলেটার সাবস্ক্রাইব করুন</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="আপনার ইমেইল ঠিকানা" required>
-                        <button type="submit" class="btn btn-primary">সাবস্ক্রাইব</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <div class="copyright">
-                    <p>&copy; ২০২৫ Lily App। সর্বস্বত্ব সংরক্ষিত।</p>
-                </div>
-                
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; ২০২3 সর্দার পাড়া জামে মসজিদ। সর্বস্বত্ব সংরক্ষিত।</p>
     </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
