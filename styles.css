@@ -15,7 +15,7 @@ body {
   background: rgba(255, 255, 255, 0.95); /* হালকা সাদা ব্যাকগ্রাউন্ড যাতে লেখা পরিষ্কার দেখা যায় */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
 h1, h2 {
@@ -25,7 +25,7 @@ h1, h2 {
 
 p {
   text-align: center;
-  color: #444;
+  color: #555;
 }
 
 form {
@@ -36,10 +36,10 @@ form {
 }
 
 input, select, button {
-  padding: 10px;
-  font-size: 1rem;
+  padding: 15px;
+  font-size: 5rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 7px;
 }
 
 button {
