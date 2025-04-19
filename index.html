@@ -1,49 +1,89 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>সর্দার পাড়া জামে মসজিদ – দান করুন</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পোল্ট্রি ফার্ম ম্যানেজমেন্ট</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>🕌 সর্দার পাড়া জামে মসজিদ</h1>
-    <p>আপনার সদয় দানের মাধ্যমে আমাদের মসজিদের উন্নয়নে সাহায্য করুন।</p>
+    <header>
+        <h1>পোল্ট্রি ফার্ম ম্যানেজমেন্ট</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">ড্যাশবোর্ড</a></li>
+                <li><a href="#birds">পাখির তালিকা</a></li>
+                <li><a href="#feeding">খাবার ব্যবস্থাপনা</a></li>
+                <li><a href="#health">স্বাস্থ্য ও চিকিৎসা</a></li>
+                <li><a href="#expenses">খরচের হিসাব</a></li>
+                <li><a href="#reports">রিপোর্ট</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <form id="donationForm">
-      <label>আপনার নাম:</label>
-      <input type="text" id="name" required>
+    <main>
+        <section id="dashboard" class="container">
+            <h2>ড্যাশবোর্ড</h2>
+            <div class="dashboard-cards">
+                <div class="card">
+                    <h3>মোট পাখি</h3>
+                    <p id="total-birds">0</p>
+                </div>
+                <div class="card">
+                    <h3>মোট খাবার খরচ</h3>
+                    <p id="total-feeding-cost">৳ 0.00</p>
+                </div>
+                <div class="card">
+                    <h3>আজকের ডিম উৎপাদন</h3>
+                    <p id="today-egg-production">0</p>
+                </div>
+                <div class="card">
+                    <h3>মোট আয়</h3>
+                    <p id="total-income">৳ 0.00</p>
+                </div>
+            </div>
+        </section>
 
-      <label>মোবাইল নম্বর:</label>
-      <input type="tel" id="phone" required>
+        <section id="birds" class="container">
+            <h2>পাখির তালিকা</h2>
+            <button id="add-bird-btn">নতুন পাখি যোগ করুন</button>
+            <div id="bird-list">
+                </div>
+        </section>
 
-      <label>দান এর পরিমাণ (৳):</label>
-      <input type="number" id="amount" required>
+        <section id="feeding" class="container">
+            <h2>খাবার ব্যবস্থাপনা</h2>
+            <button id="add-feed-btn">নতুন খাবার যোগ করুন</button>
+            <div id="feed-list">
+                </div>
+        </section>
 
-      <label>দান পদ্ধতি:</label>
-      <select id="method" required>
-        <option value="bkash">বিকাশ</option>
-        <option value="nagad">নগদ</option>
-        <option value="cash">ক্যাশ</option>
-      </select>
+        <section id="health" class="container">
+            <h2>স্বাস্থ্য ও চিকিৎসা</h2>
+            <button id="add-treatment-btn">নতুন চিকিৎসা যোগ করুন</button>
+            <div id="treatment-list">
+                </div>
+        </section>
 
-      <button type="submit">দান করুন</button>
-    </form>
+        <section id="expenses" class="container">
+            <h2>খরচের হিসাব</h2>
+            <button id="add-expense-btn">নতুন খরচ যোগ করুন</button>
+            <div id="expense-list">
+                </div>
+        </section>
 
-    <h2>📋 দানের তালিকা</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>নাম</th>
-          <th>ফোন</th>
-          <th>পরিমাণ</th>
-          <th>পদ্ধতি</th>
-        </tr>
-      </thead>
-      <tbody id="donationTable"></tbody>
-    </table>
-  </div>
+        <section id="reports" class="container">
+            <h2>রিপোর্ট</h2>
+            <button id="generate-report-btn">রিপোর্ট তৈরি করুন</button>
+            <div id="report-section">
+                </div>
+        </section>
+    </main>
 
-  <script src="script.js"></script>
+    <footer>
+        <p>&copy; ২০২৫ পোল্ট্রি ফার্ম ম্যানেজমেন্ট</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
