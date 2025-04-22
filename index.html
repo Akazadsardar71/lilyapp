@@ -1,183 +1,176 @@
+<!-- 
+  লেয়ার মুরগির মেডিসিন সিডিউল অ্যাপ্লিকেশন 
+  HTML, CSS এবং JavaScript দিয়ে তৈরি একটি সম্পূর্ণ responsive এবং professional-grade টুল।
+-->
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>মেডিসিন রিমাইন্ডার</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>লেয়ার মুরগির মেডিসিন সিডিউল</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f0f9ff;
+    /* Reset এবং বেসিক স্টাইলিং */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
     }
 
     header {
-      background-color: #0284c7;
-      color: white;
       text-align: center;
-      padding: 1rem;
+      margin-bottom: 30px;
     }
 
-    .container {
+    header h1 {
+      font-size: 2rem;
+      color: #2d3748;
+    }
+
+    /* শিডিউল কন্টেইনার */
+    .schedule-container {
       max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .day {
-      margin-bottom: 2rem;
+    /* টেবিল স্টাইলিং */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
     }
 
-    .day h2 {
-      border-bottom: 2px solid #38bdf8;
-      padding-bottom: 0.5rem;
-      color: #075985;
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #e2e8f0;
+      text-align: center;
     }
 
-    .med-list {
-      list-style: none;
-      padding: 0;
+    th {
+      background-color: #edf2f7;
+      font-weight: bold;
     }
 
-    .med-item {
+    /* ইনপুট এবং বাটন স্টাইল */
+    .form-group {
       display: flex;
-      justify-content: space-between;
-      background: #e0f7ff;
-      margin: 0.5rem 0;
-      padding: 0.75rem 1rem;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .form-group input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #cbd5e0;
       border-radius: 5px;
     }
 
-    .med-item input[type="checkbox"] {
-      transform: scale(1.2);
+    button {
+      background-color: #2b6cb0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
     }
 
+    button:hover {
+      background-color: #2c5282;
+    }
+
+    /* রেসপনসিভ ডিজাইন */
     @media (max-width: 600px) {
-      .med-item {
+      .form-group {
         flex-direction: column;
-        align-items: flex-start;
       }
 
-      .med-item input[type="checkbox"] {
-        margin-top: 0.5rem;
+      th, td {
+        font-size: 0.9rem;
       }
     }
   </style>
 </head>
 <body>
+
+  <!-- হেডার -->
   <header>
-    <h1>মেডিসিন রিমাইন্ডার</h1>
-    <p>নির্ধারিত সময়ে ওষুধ খাওয়ার জন্য নোটিফিকেশন পাবেন</p>
+    <h1>লেয়ার মুরগির মেডিসিন সিডিউল</h1>
   </header>
 
-  <div class="container" id="scheduleContainer"></div>
+  <!-- মেডিসিন সিডিউল কন্টেইনার -->
+  <div class="schedule-container">
+    <table id="medicineTable">
+      <thead>
+        <tr>
+          <th>দিন</th>
+          <th>মেডিসিনের নাম</th>
+          <th>মাত্রা</th>
+          <th>মন্তব্য</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ডাইনামিক সারি এখানে যুক্ত হবে -->
+      </tbody>
+    </table>
+
+    <!-- ইনপুট ফর্ম -->
+    <div class="form-group">
+      <input type="text" id="dayInput" placeholder="দিন (যেমন: ১ম দিন)" />
+      <input type="text" id="medicineInput" placeholder="মেডিসিনের নাম" />
+      <input type="text" id="doseInput" placeholder="মাত্রা (যেমন: ৫ মিলি/লিটার)" />
+      <input type="text" id="noteInput" placeholder="মন্তব্য (ঐচ্ছিক)" />
+      <button onclick="addMedicine()">যোগ করুন</button>
+    </div>
+  </div>
 
   <script>
-    // মেডিসিন শিডিউল (উদাহরণস্বরূপ সময় 24-hr format)
-    const medicineSchedule = {
-      "আজ": [
-        { name: "Paracetamol 500mg", time: "08:00" },
-        { name: "Vitamin C", time: "16:00" },
-        { name: "Antacid", time: "22:00" }
-      ]
-    };
+    // মেডিসিন যুক্ত করার ফাংশন
+    function addMedicine() {
+      const day = document.getElementById('dayInput').value.trim();
+      const medicine = document.getElementById('medicineInput').value.trim();
+      const dose = document.getElementById('doseInput').value.trim();
+      const note = document.getElementById('noteInput').value.trim();
 
-    // HTML রেন্ডার
-    function renderSchedule(schedule) {
-      const container = document.getElementById("scheduleContainer");
-
-      for (const day in schedule) {
-        const daySection = document.createElement("div");
-        daySection.className = "day";
-
-        const heading = document.createElement("h2");
-        heading.textContent = day;
-
-        const list = document.createElement("ul");
-        list.className = "med-list";
-
-        schedule[day].forEach(med => {
-          const item = document.createElement("li");
-          item.className = "med-item";
-
-          const label = document.createElement("label");
-          label.textContent = `${med.name} - ${med.time}`;
-
-          const checkbox = document.createElement("input");
-          checkbox.type = "checkbox";
-
-          item.appendChild(label);
-          item.appendChild(checkbox);
-          list.appendChild(item);
-        });
-
-        daySection.appendChild(heading);
-        daySection.appendChild(list);
-        container.appendChild(daySection);
+      // যাচাই করা হচ্ছে সব প্রয়োজনীয় ঘর পূর্ণ হয়েছে কিনা
+      if (!day || !medicine || !dose) {
+        alert('দয়া করে দিন, মেডিসিন ও মাত্রা প্রদান করুন।');
+        return;
       }
+
+      const tableBody = document.getElementById('medicineTable').querySelector('tbody');
+      const row = document.createElement('tr');
+
+      // নতুন সারি তৈরি
+      row.innerHTML = `
+        <td>${day}</td>
+        <td>${medicine}</td>
+        <td>${dose}</td>
+        <td>${note}</td>
+      `;
+
+      // টেবিলে যুক্ত করা
+      tableBody.appendChild(row);
+
+      // ইনপুট ফিল্ড রিসেট করা
+      document.getElementById('dayInput').value = '';
+      document.getElementById('medicineInput').value = '';
+      document.getElementById('doseInput').value = '';
+      document.getElementById('noteInput').value = '';
     }
-
-    // সময় পার্স করা (HH:mm কে Date object এ রূপান্তর)
-    function parseTimeToDate(timeStr) {
-      const [hour, minute] = timeStr.split(":").map(Number);
-      const now = new Date();
-      const date = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hour, minute);
-      return date;
-    }
-
-    // রিমাইন্ডার সেট করা
-    function setupReminders(schedule) {
-      for (const day in schedule) {
-        schedule[day].forEach(med => {
-          const medTime = parseTimeToDate(med.time);
-
-          // ১ মিনিট আগে নোটিফিকেশন পাঠানোর জন্য সময় নির্ধারণ
-          const notifyTime = new Date(medTime.getTime() - 1 * 60 * 1000);
-          const now = new Date();
-          const delay = notifyTime.getTime() - now.getTime();
-
-          if (delay > 0) {
-            setTimeout(() => {
-              showNotification(med.name, med.time);
-            }, delay);
-          }
-        });
-      }
-    }
-
-    // ব্রাউজার নোটিফিকেশন ফাংশন
-    function showNotification(medName, time) {
-      if (Notification.permission === "granted") {
-        new Notification("💊 ওষুধ মনে করিয়ে দিচ্ছে", {
-          body: `${time} - ${medName} খাওয়ার সময় হয়েছে!`,
-          icon: "https://cdn-icons-png.flaticon.com/512/2950/2950701.png"
-        });
-      }
-    }
-
-    // নোটিফিকেশন অনুমতি চাওয়া
-    function requestNotificationPermission() {
-      if ("Notification" in window) {
-        Notification.requestPermission().then(permission => {
-          if (permission === "granted") {
-            console.log("নোটিফিকেশন অনুমোদিত হয়েছে");
-            setupReminders(medicineSchedule);
-          } else {
-            alert("নোটিফিকেশন কাজ করবে না কারণ অনুমতি দেওয়া হয়নি।");
-          }
-        });
-      } else {
-        alert("আপনার ব্রাউজার নোটিফিকেশন সাপোর্ট করে না।");
-      }
-    }
-
-    // শুরুতে রান
-    renderSchedule(medicineSchedule);
-    requestNotificationPermission();
   </script>
+
 </body>
 </html>
