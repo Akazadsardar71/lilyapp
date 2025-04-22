@@ -1,89 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>পোল্ট্রি ফার্ম ম্যানেজমেন্ট</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>মেডিসিন রিমাইন্ডার</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f9ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0284c7;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .day {
+      margin-bottom: 2rem;
+    }
+
+    .day h2 {
+      border-bottom: 2px solid #38bdf8;
+      padding-bottom: 0.5rem;
+      color: #075985;
+    }
+
+    .med-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .med-item {
+      display: flex;
+      justify-content: space-between;
+      background: #e0f7ff;
+      margin: 0.5rem 0;
+      padding: 0.75rem 1rem;
+      border-radius: 5px;
+    }
+
+    .med-item input[type="checkbox"] {
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 600px) {
+      .med-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .med-item input[type="checkbox"] {
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>পোল্ট্রি ফার্ম ম্যানেজমেন্ট</h1>
-        <nav>
-            <ul>
-                <li><a href="#dashboard">ড্যাশবোর্ড</a></li>
-                <li><a href="#birds">পাখির তালিকা</a></li>
-                <li><a href="#feeding">খাবার ব্যবস্থাপনা</a></li>
-                <li><a href="#health">স্বাস্থ্য ও চিকিৎসা</a></li>
-                <li><a href="#expenses">খরচের হিসাব</a></li>
-                <li><a href="#reports">রিপোর্ট</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>মেডিসিন রিমাইন্ডার</h1>
+    <p>নির্ধারিত সময়ে ওষুধ খাওয়ার জন্য নোটিফিকেশন পাবেন</p>
+  </header>
 
-    <main>
-        <section id="dashboard" class="container">
-            <h2>ড্যাশবোর্ড</h2>
-            <div class="dashboard-cards">
-                <div class="card">
-                    <h3>মোট পাখি</h3>
-                    <p id="total-birds">0</p>
-                </div>
-                <div class="card">
-                    <h3>মোট খাবার খরচ</h3>
-                    <p id="total-feeding-cost">৳ 0.00</p>
-                </div>
-                <div class="card">
-                    <h3>আজকের ডিম উৎপাদন</h3>
-                    <p id="today-egg-production">0</p>
-                </div>
-                <div class="card">
-                    <h3>মোট আয়</h3>
-                    <p id="total-income">৳ 0.00</p>
-                </div>
-            </div>
-        </section>
+  <div class="container" id="scheduleContainer"></div>
 
-        <section id="birds" class="container">
-            <h2>পাখির তালিকা</h2>
-            <button id="add-bird-btn">নতুন পাখি যোগ করুন</button>
-            <div id="bird-list">
-                </div>
-        </section>
+  <script>
+    // মেডিসিন শিডিউল (উদাহরণস্বরূপ সময় 24-hr format)
+    const medicineSchedule = {
+      "আজ": [
+        { name: "Paracetamol 500mg", time: "08:00" },
+        { name: "Vitamin C", time: "16:00" },
+        { name: "Antacid", time: "22:00" }
+      ]
+    };
 
-        <section id="feeding" class="container">
-            <h2>খাবার ব্যবস্থাপনা</h2>
-            <button id="add-feed-btn">নতুন খাবার যোগ করুন</button>
-            <div id="feed-list">
-                </div>
-        </section>
+    // HTML রেন্ডার
+    function renderSchedule(schedule) {
+      const container = document.getElementById("scheduleContainer");
 
-        <section id="health" class="container">
-            <h2>স্বাস্থ্য ও চিকিৎসা</h2>
-            <button id="add-treatment-btn">নতুন চিকিৎসা যোগ করুন</button>
-            <div id="treatment-list">
-                </div>
-        </section>
+      for (const day in schedule) {
+        const daySection = document.createElement("div");
+        daySection.className = "day";
 
-        <section id="expenses" class="container">
-            <h2>খরচের হিসাব</h2>
-            <button id="add-expense-btn">নতুন খরচ যোগ করুন</button>
-            <div id="expense-list">
-                </div>
-        </section>
+        const heading = document.createElement("h2");
+        heading.textContent = day;
 
-        <section id="reports" class="container">
-            <h2>রিপোর্ট</h2>
-            <button id="generate-report-btn">রিপোর্ট তৈরি করুন</button>
-            <div id="report-section">
-                </div>
-        </section>
-    </main>
+        const list = document.createElement("ul");
+        list.className = "med-list";
 
-    <footer>
-        <p>&copy; ২০২৫ পোল্ট্রি ফার্ম ম্যানেজমেন্ট</p>
-    </footer>
+        schedule[day].forEach(med => {
+          const item = document.createElement("li");
+          item.className = "med-item";
 
-    <script src="script.js"></script>
+          const label = document.createElement("label");
+          label.textContent = `${med.name} - ${med.time}`;
+
+          const checkbox = document.createElement("input");
+          checkbox.type = "checkbox";
+
+          item.appendChild(label);
+          item.appendChild(checkbox);
+          list.appendChild(item);
+        });
+
+        daySection.appendChild(heading);
+        daySection.appendChild(list);
+        container.appendChild(daySection);
+      }
+    }
+
+    // সময় পার্স করা (HH:mm কে Date object এ রূপান্তর)
+    function parseTimeToDate(timeStr) {
+      const [hour, minute] = timeStr.split(":").map(Number);
+      const now = new Date();
+      const date = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hour, minute);
+      return date;
+    }
+
+    // রিমাইন্ডার সেট করা
+    function setupReminders(schedule) {
+      for (const day in schedule) {
+        schedule[day].forEach(med => {
+          const medTime = parseTimeToDate(med.time);
+
+          // ১ মিনিট আগে নোটিফিকেশন পাঠানোর জন্য সময় নির্ধারণ
+          const notifyTime = new Date(medTime.getTime() - 1 * 60 * 1000);
+          const now = new Date();
+          const delay = notifyTime.getTime() - now.getTime();
+
+          if (delay > 0) {
+            setTimeout(() => {
+              showNotification(med.name, med.time);
+            }, delay);
+          }
+        });
+      }
+    }
+
+    // ব্রাউজার নোটিফিকেশন ফাংশন
+    function showNotification(medName, time) {
+      if (Notification.permission === "granted") {
+        new Notification("💊 ওষুধ মনে করিয়ে দিচ্ছে", {
+          body: `${time} - ${medName} খাওয়ার সময় হয়েছে!`,
+          icon: "https://cdn-icons-png.flaticon.com/512/2950/2950701.png"
+        });
+      }
+    }
+
+    // নোটিফিকেশন অনুমতি চাওয়া
+    function requestNotificationPermission() {
+      if ("Notification" in window) {
+        Notification.requestPermission().then(permission => {
+          if (permission === "granted") {
+            console.log("নোটিফিকেশন অনুমোদিত হয়েছে");
+            setupReminders(medicineSchedule);
+          } else {
+            alert("নোটিফিকেশন কাজ করবে না কারণ অনুমতি দেওয়া হয়নি।");
+          }
+        });
+      } else {
+        alert("আপনার ব্রাউজার নোটিফিকেশন সাপোর্ট করে না।");
+      }
+    }
+
+    // শুরুতে রান
+    renderSchedule(medicineSchedule);
+    requestNotificationPermission();
+  </script>
 </body>
 </html>
