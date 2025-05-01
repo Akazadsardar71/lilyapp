@@ -1,176 +1,95 @@
-<!-- 
-  লেয়ার মুরগির মেডিসিন সিডিউল অ্যাপ্লিকেশন 
-  HTML, CSS এবং JavaScript দিয়ে তৈরি একটি সম্পূর্ণ responsive এবং professional-grade টুল।
--->
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>লেয়ার মুরগির মেডিসিন সিডিউল</title>
-  <style>
-    /* Reset এবং বেসিক স্টাইলিং */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f5f7fa;
-      color: #333;
-      line-height: 1.6;
-      padding: 20px;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      color: #2d3748;
-    }
-
-    /* শিডিউল কন্টেইনার */
-    .schedule-container {
-      max-width: 800px;
-      margin: 0 auto;
-      background: #ffffff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    /* টেবিল স্টাইলিং */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-    }
-
-    th, td {
-      padding: 12px 15px;
-      border: 1px solid #e2e8f0;
-      text-align: center;
-    }
-
-    th {
-      background-color: #edf2f7;
-      font-weight: bold;
-    }
-
-    /* ইনপুট এবং বাটন স্টাইল */
-    .form-group {
-      display: flex;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .form-group input {
-      flex: 1;
-      padding: 10px;
-      border: 1px solid #cbd5e0;
-      border-radius: 5px;
-    }
-
-    button {
-      background-color: #2b6cb0;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #2c5282;
-    }
-
-    /* রেসপনসিভ ডিজাইন */
-    @media (max-width: 600px) {
-      .form-group {
-        flex-direction: column;
-      }
-
-      th, td {
-        font-size: 0.9rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>ইসলামী কুইজ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f3f3f3;
+            padding: 30px;
+        }
+        .quiz-container {
+            background: #fff;
+            padding: 20px;
+            max-width: 700px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .question p {
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 20px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- হেডার -->
-  <header>
-    <h1>লেয়ার মুরগির মেডিসিন সিডিউল</h1>
-  </header>
+<div class="quiz-container">
+    <h2>ইসলামী কুইজ</h2>
 
-  <!-- মেডিসিন সিডিউল কন্টেইনার -->
-  <div class="schedule-container">
-    <table id="medicineTable">
-      <thead>
-        <tr>
-          <th>দিন</th>
-          <th>মেডিসিনের নাম</th>
-          <th>মাত্রা</th>
-          <th>মন্তব্য</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- ডাইনামিক সারি এখানে যুক্ত হবে -->
-      </tbody>
-    </table>
+    <form id="quizForm">
 
-    <!-- ইনপুট ফর্ম -->
-    <div class="form-group">
-      <input type="text" id="dayInput" placeholder="দিন (যেমন: ১ম দিন)" />
-      <input type="text" id="medicineInput" placeholder="মেডিসিনের নাম" />
-      <input type="text" id="doseInput" placeholder="মাত্রা (যেমন: ৫ মিলি/লিটার)" />
-      <input type="text" id="noteInput" placeholder="মন্তব্য (ঐচ্ছিক)" />
-      <button onclick="addMedicine()">যোগ করুন</button>
-    </div>
-  </div>
+        <div class="question">
+            <p>১. কুরআন কতটি সূরায় বিভক্ত?</p>
+            <label><input type="radio" name="q1" value="wrong"> 100</label><br>
+            <label><input type="radio" name="q1" value="correct"> 114</label><br>
+            <label><input type="radio" name="q1" value="wrong"> 110</label>
+        </div>
 
-  <script>
-    // মেডিসিন যুক্ত করার ফাংশন
-    function addMedicine() {
-      const day = document.getElementById('dayInput').value.trim();
-      const medicine = document.getElementById('medicineInput').value.trim();
-      const dose = document.getElementById('doseInput').value.trim();
-      const note = document.getElementById('noteInput').value.trim();
+        <div class="question">
+            <p>২. হিজরী সনের প্রথম মাস কোনটি?</p>
+            <label><input type="radio" name="q2" value="correct"> মুহাররম</label><br>
+            <label><input type="radio" name="q2" value="wrong"> রমজান</label><br>
+            <label><input type="radio" name="q2" value="wrong"> জিলহজ্জ</label>
+        </div>
 
-      // যাচাই করা হচ্ছে সব প্রয়োজনীয় ঘর পূর্ণ হয়েছে কিনা
-      if (!day || !medicine || !dose) {
-        alert('দয়া করে দিন, মেডিসিন ও মাত্রা প্রদান করুন।');
-        return;
-      }
+        <div class="question">
+            <p>৩. শেষ নবী কে?</p>
+            <label><input type="radio" name="q3" value="wrong"> ঈসা (আ.)</label><br>
+            <label><input type="radio" name="q3" value="correct"> মুহাম্মদ (সা.)</label><br>
+            <label><input type="radio" name="q3" value="wrong"> মূসা (আ.)</label>
+        </div>
 
-      const tableBody = document.getElementById('medicineTable').querySelector('tbody');
-      const row = document.createElement('tr');
+        <button type="button" onclick="checkQuiz()">Submit</button>
+    </form>
 
-      // নতুন সারি তৈরি
-      row.innerHTML = `
-        <td>${day}</td>
-        <td>${medicine}</td>
-        <td>${dose}</td>
-        <td>${note}</td>
-      `;
+    <div id="result"></div>
+</div>
 
-      // টেবিলে যুক্ত করা
-      tableBody.appendChild(row);
+<script>
+    function checkQuiz() {
+        let total = 3;
+        let score = 0;
+        let answers = document.forms["quizForm"];
 
-      // ইনপুট ফিল্ড রিসেট করা
-      document.getElementById('dayInput').value = '';
-      document.getElementById('medicineInput').value = '';
-      document.getElementById('doseInput').value = '';
-      document.getElementById('noteInput').value = '';
+        for (let i = 1; i <= total; i++) {
+            let q = "q" + i;
+            if (answers[q].value === "correct") {
+                score++;
+            }
+        }
+
+        document.getElementById("result").innerHTML = "আপনার স্কোর: " + score + " / " + total;
     }
-  </script>
+</script>
 
 </body>
 </html>
