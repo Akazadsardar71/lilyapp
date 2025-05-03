@@ -1,95 +1,127 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <title>ইসলামী কুইজ</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: #f3f3f3;
-            padding: 30px;
-        }
-        .quiz-container {
-            background: #fff;
-            padding: 20px;
-            max-width: 700px;
-            margin: auto;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
-        h2 {
-            color: #2c3e50;
-        }
-        .question {
-            margin: 20px 0;
-        }
-        .question p {
-            font-weight: bold;
-        }
-        button {
-            padding: 10px 20px;
-            background: #27ae60;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #result {
-            margin-top: 20px;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>লেয়ার মুরগির মেডিসিন রেকর্ড</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #e9f5e9;
+      padding: 0;
+    }
+
+    header {
+      background: #2d6a4f;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    form {
+      background: #f0fff0;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 500px;
+      margin: 20px auto;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: border 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #2d6a4f;
+      outline: none;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      background: linear-gradient(to right, #38b000, #70e000);
+      color: white;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #2d6a4f, #4cc900);
+    }
+  </style>
 </head>
 <body>
 
-<div class="quiz-container">
-    <h2>ইসলামী কুইজ</h2>
+  <header>
+    <h2>লেয়ার মুরগির মেডিসিন রেকর্ড</h2>
+  </header>
 
-    <form id="quizForm">
+  <form id="medicineForm">
+    <label for="date">তারিখ</label>
+    <input type="date" id="date" name="date" required />
 
-        <div class="question">
-            <p>১. কুরআন কতটি সূরায় বিভক্ত?</p>
-            <label><input type="radio" name="q1" value="wrong"> 100</label><br>
-            <label><input type="radio" name="q1" value="correct"> 114</label><br>
-            <label><input type="radio" name="q1" value="wrong"> 110</label>
-        </div>
+    <label for="antibiotic">অ্যান্টিবায়োটিক</label>
+    <input type="text" id="antibiotic" name="antibiotic" />
 
-        <div class="question">
-            <p>২. হিজরী সনের প্রথম মাস কোনটি?</p>
-            <label><input type="radio" name="q2" value="correct"> মুহাররম</label><br>
-            <label><input type="radio" name="q2" value="wrong"> রমজান</label><br>
-            <label><input type="radio" name="q2" value="wrong"> জিলহজ্জ</label>
-        </div>
+    <label for="vaccine">ভ্যাকসিন</label>
+    <input type="text" id="vaccine" name="vaccine" />
 
-        <div class="question">
-            <p>৩. শেষ নবী কে?</p>
-            <label><input type="radio" name="q3" value="wrong"> ঈসা (আ.)</label><br>
-            <label><input type="radio" name="q3" value="correct"> মুহাম্মদ (সা.)</label><br>
-            <label><input type="radio" name="q3" value="wrong"> মূসা (আ.)</label>
-        </div>
+    <label for="deworming">কৃমির ওষুধ</label>
+    <input type="text" id="deworming" name="deworming" />
 
-        <button type="button" onclick="checkQuiz()">Submit</button>
-    </form>
+    <label for="vitamin">ভিটামিন</label>
+    <input type="text" id="vitamin" name="vitamin" />
 
-    <div id="result"></div>
-</div>
+    <label for="other">অন্যান্য ওষুধ</label>
+    <textarea id="other" name="other" rows="3"></textarea>
 
-<script>
-    function checkQuiz() {
-        let total = 3;
-        let score = 0;
-        let answers = document.forms["quizForm"];
+    <label for="note">মন্তব্য / নোট</label>
+    <textarea id="note" name="note" rows="3"></textarea>
 
-        for (let i = 1; i <= total; i++) {
-            let q = "q" + i;
-            if (answers[q].value === "correct") {
-                score++;
-            }
-        }
+    <button type="submit">সাবমিট করুন</button>
+  </form>
 
-        document.getElementById("result").innerHTML = "আপনার স্কোর: " + score + " / " + total;
-    }
-</script>
+  <script>
+    document.getElementById("medicineForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(this);
+      const data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+
+      fetch("https://script.google.com/macros/s/AKfycbxQPOKycRZvxYXiP2zMo4dA2GnouMbQ3NizK9T1y-yyjDa5k-l8dGqPbg90ikg593Gi1g/exec", {
+        method: "POST",
+        body: JSON.stringify(data),
+      })
+        .then((response) => response.text())
+        .then((result) => {
+          alert(result);
+          document.getElementById("medicineForm").reset();
+        })
+        .catch((error) => console.error("Error:", error));
+    });
+  </script>
 
 </body>
 </html>
