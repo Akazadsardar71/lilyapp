@@ -41,3 +41,28 @@ function deleteCustomer(index) {
     displayCustomers(); // পুনরায় ক্রেতা তালিকা প্রদর্শন
 }
 
+document.getElementById("dailyReportBtn").addEventListener("click", function() {
+    let today = new Date().toLocaleDateString();
+    let dailySales = sales.filter(sale => new Date(sale.date).toLocaleDateString() === today);
+    
+    displayReport(dailySales, "দৈনিক রিপোর্ট");
+});
+
+document.getElementById("monthlyReportBtn").addEventListener("click", function() {
+    let currentMonth = new Date().getMonth();
+    let monthlySales = sales.filter(sale => new Date(sale.date).getMonth() === currentMonth);
+    
+    displayReport(monthlySales, "মাসিক রিপোর্ট");
+});
+
+function displayReport(salesData, reportType) {
+    let reportDiv = document.getElementById("reportResult");
+    reportDiv.innerHTML = `<h3>${reportType}:</h3><ul>`;
+
+    salesData.forEach(sale => {
+        let saleDate = new Date(sale.date).toLocaleDateString();
+        reportDiv.innerHTML += `<li>${sale.productName} - ${sale.quantitySold} পণ্য বিক্রি, মোট মূল্য: ৳${sale.saleAmount} (তারিখ: ${saleDate})</li>`;
+    });
+
+    reportDiv.innerHTML += "</ul>";
+}
