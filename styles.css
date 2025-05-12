@@ -1,1 +1,30 @@
+let sales = [];
+
+// বিক্রয় যোগ করার ফাংশন
+document.getElementById("salesForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let productName = document.getElementById("saleProductName").value;
+    let quantitySold = document.getElementById("saleQuantity").value;
+    let saleAmount = document.getElementById("saleAmount").value;
+
+    let sale = { productName, quantitySold, saleAmount, date: new Date() };
+    sales.push(sale);
+
+    document.getElementById("salesForm").reset();
+    displaySales();
+});
+
+// বিক্রয় তালিকা প্রদর্শন
+function displaySales() {
+    let reportDiv = document.getElementById("reportResult");
+    reportDiv.innerHTML = "<h3>বিক্রয় রেকর্ড:</h3><ul>";
+
+    sales.forEach(sale => {
+        let saleDate = new Date(sale.date).toLocaleDateString();
+        reportDiv.innerHTML += `<li>${sale.productName} - ${sale.quantitySold} পণ্য বিক্রি, মোট মূল্য: ৳${sale.saleAmount} (তারিখ: ${saleDate})</li>`;
+    });
+
+    reportDiv.innerHTML += "</ul>";
+}
 
