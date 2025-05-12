@@ -1,4 +1,60 @@
-<section id="customer-form">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetShop - স্টক ম্যানেজমেন্ট</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ভেটেরিনারি দোকান স্টক ম্যানেজমেন্ট</h1>
+    </header>
+
+    <section id="product-form">
+        <h2>পণ্য যোগ/আপডেট</h2>
+        <form id="productForm">
+            <label for="productName">পণ্যের নাম:</label>
+            <input type="text" id="productName" required>
+            
+            <label for="productPrice">মূল্য:</label>
+            <input type="number" id="productPrice" required>
+            
+            <label for="productQuantity">মজুত পরিমাণ:</label>
+            <input type="number" id="productQuantity" required>
+
+            <button type="submit">পণ্য যোগ করুন</button>
+        </form>
+    </section>
+
+    <section id="product-list">
+        <h2>পণ্য তালিকা</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>পণ্যের নাম</th>
+                    <th>মূল্য</th>
+                    <th>মজুত</th>
+                    <th>অপশন</th>
+                </tr>
+            </thead>
+            <tbody id="productTable">
+                <!-- এখানে পণ্য তালিকা প্রদর্শিত হবে -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="sales-report">
+        <h2>বিক্রয় রিপোর্ট</h2>
+        <button id="dailyReportBtn">দৈনিক রিপোর্ট দেখুন</button>
+        <button id="monthlyReportBtn">মাসিক রিপোর্ট দেখুন</button>
+        <div id="reportResult"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
     <h2>ক্রেতার তথ্য যোগ করুন</h2>
     <form id="customerForm">
         <label for="customerName">ক্রেতার নাম:</label>
