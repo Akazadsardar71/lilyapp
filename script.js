@@ -1,1 +1,43 @@
+let customers = [];
+
+// ক্রেতা যোগ করার ফাংশন
+document.getElementById("customerForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // ক্রেতার ইনফরমেশন সংগ্রহ
+    let name = document.getElementById("customerName").value;
+    let phone = document.getElementById("customerPhone").value;
+    let email = document.getElementById("customerEmail").value;
+
+    let customer = { name, phone, email };
+    customers.push(customer);
+
+    // ফর্ম রিসেট
+    document.getElementById("customerForm").reset();
+
+    // ক্রেতা তালিকা আপডেট
+    displayCustomers();
+});
+
+// ক্রেতা তালিকা প্রদর্শন
+function displayCustomers() {
+    const customerTable = document.getElementById("customerTable");
+    customerTable.innerHTML = "";
+
+    customers.forEach((customer, index) => {
+        let row = `<tr>
+            <td>${customer.name}</td>
+            <td>${customer.phone}</td>
+            <td>${customer.email}</td>
+            <td><button onclick="deleteCustomer(${index})">মুছুন</button></td>
+        </tr>`;
+        customerTable.innerHTML += row;
+    });
+}
+
+// ক্রেতা মুছানোর ফাংশন
+function deleteCustomer(index) {
+    customers.splice(index, 1); // ক্রেতা মুছে ফেলা
+    displayCustomers(); // পুনরায় ক্রেতা তালিকা প্রদর্শন
+}
 
